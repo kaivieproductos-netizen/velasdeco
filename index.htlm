@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Para Adultos | Oferta Especial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
+        }
+        /* Ocultar barra de desplazamiento en la galería */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .btn-shake:hover {
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- CONTENEDOR STICKY (BARRA FIJA + HEADER) -->
+    <div class="sticky top-0 z-50 w-full shadow-sm">
+        <!-- BARRA DE ANUNCIOS SUPERIOR CON TEMPORIZADOR -->
+        <div class="bg-red-700 py-2 px-2 text-[11px] md:text-sm font-bold uppercase flex flex-col md:flex-row justify-center items-center md:gap-3 text-center w-full">
+            <span class="text-white tracking-wider">🚨 OFERTA DE TIEMPO LIMITADO</span>
+            <span id="top-timer" class="text-yellow-300 font-black text-sm md:text-base bg-red-800 px-3 py-0.5 rounded mt-1 md:mt-0 shadow-inner tracking-widest animate-pulse">23:59:59</span>
+        </div>
+
+        <!-- HEADER / NAVEGACIÓN -->
+        <header class="border-b border-gray-200 py-4 px-4 bg-white">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <!-- Menú hamburguesa (Móvil) -->
+                <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+                
+                <!-- Logo -->
+
+            <!-- Iconos de usuario y carrito -->
+            <div class="flex items-center gap-4 md:gap-6 text-xl">
+                <i class="fas fa-search cursor-pointer hover:text-red-600 transition hidden md:block"></i>
+                <i class="far fa-user cursor-pointer hover:text-red-600 transition"></i>
+                <div class="relative cursor-pointer hover:text-red-600 transition">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">1</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL DEL PRODUCTO (Layout Dividido) -->
+    <main class="max-w-7xl mx-auto px-4 pt-8 pb-0 md:pb-2">
+        <!-- Migas de pan -->
+        <nav class="text-sm text-gray-500 mb-6 hidden md:block">
+            Inicio <span class="mx-2">></span> Cursos <span class="mx-2">></span> <span class="text-gray-900 font-semibold">ChatGPT Para Adultos</span>
+        </nav>
+
+        <div class="grid md:grid-cols-2 gap-10">
+            
+            <!-- COLUMNA IZQUIERDA: GALERÍA DE IMÁGENES -->
+            <div class="flex flex-col gap-4">
+                <!-- Imagen Principal 1 -->
+                <div class="bg-gray-100 aspect-square rounded-lg flex items-center justify-center border border-gray-200 overflow-hidden relative">
+                    <img src="https://www.sotcarga.com/downloads/kaivie%20productos/portada.png" alt="Portada Curso ChatGPT" class="w-full h-full object-cover z-10">
+                    <div class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 uppercase rounded z-20">Oferta</div>
+                </div>
+                
+                <!-- Imagen Principal 2 -->
+                <div class="bg-gray-100 aspect-square rounded-lg flex items-center justify-center border border-gray-200 overflow-hidden relative">
+                    <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt19.png" alt="Contenido Curso ChatGPT" class="w-full h-full object-cover z-10">
+                    <div class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 uppercase rounded z-20">Oferta</div>
+                </div>
+                
+                <!-- Miniaturas de la Galería -->
+                <div class="flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+                    <div class="w-1/4 aspect-square flex-shrink-0 bg-gray-200 rounded border-2 border-red-600 flex items-center justify-center overflow-hidden cursor-pointer">
+                        <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt.png" alt="Miniatura 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-1/4 aspect-square flex-shrink-0 bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden cursor-pointer opacity-70 hover:opacity-100">
+                        <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt2.png" alt="Miniatura 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-1/4 aspect-square flex-shrink-0 bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden cursor-pointer opacity-70 hover:opacity-100">
+                        <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt5.png" alt="Miniatura 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-1/4 aspect-square flex-shrink-0 bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden cursor-pointer opacity-70 hover:opacity-100">
+                        <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt6.png" alt="Miniatura 4" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- NUEVO CONTENEDOR PARA LLENAR ESPACIO EN BLANCO (Solo visible en Desktop) -->
+                <div class="hidden md:flex flex-col flex-1 -mt-2">
+                    <div class="rounded-lg flex items-center justify-center overflow-hidden relative shadow-sm w-full h-full">
+                        <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt19.png" alt="Detalle del Curso" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA: INFO Y BOTONES DE COMPRA -->
+            <div class="flex flex-col">
+                <p class="text-sm text-gray-500 uppercase tracking-widest mb-2">AIAcademy</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-4">
+                    🤖✨ ChatGPT para Adultos: Aprende Inteligencia Artificial desde Cero ✨🤖
+                </h1>
+                
+                <!-- Intro del curso -->
+                <p class="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
+                    ¿Te gustaría entender cómo funciona la inteligencia artificial y cómo usar ChatGPT de manera sencilla? No importa si no tienes conocimientos previos, este curso te enseñará paso a paso cómo aprovechar ChatGPT para facilitar tareas, aprender más rápido y mejorar tu productividad.
+                </p>
+
+                <!-- Reseñas (Estrellitas) -->
+                <div class="flex items-center gap-2 mb-6 border-t border-b border-gray-100 py-3">
+                    <div class="text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#reviews" class="text-sm text-gray-600 underline">11 Reseñas verificadas</a>
+                </div>
+
+                <!-- Bloque de Precio -->
+                <div class="mb-6">
+                    <div class="flex items-end gap-3 mb-1">
+                        <span class="text-lg text-gray-500 line-through">Precio habitual $ 181.320</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <div class="flex items-center gap-4">
+                            <span class="text-3xl md:text-4xl font-black text-red-600">$ 90.660</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded">50% OFF</span>
+                        </div>
+                        <p class="text-gray-700 text-sm mt-1">en 12 cuotas de <strong>$ 7.555 *</strong> en la tarjeta de crédito</p>
+                    </div>
+                    <p class="text-sm text-green-600 font-bold mt-2"><i class="fas fa-check-circle"></i> Disponibilidad Inmediata - Acceso de por vida</p>
+                </div>
+
+                <!-- Cantidad (Simulada para diseño e-commerce) -->
+                <div class="mb-6 hidden md:block">
+                    <p class="text-sm font-semibold mb-2 text-gray-700">Cantidad</p>
+                    <div class="flex items-center border border-gray-300 rounded w-28">
+                        <button class="px-3 py-1 text-xl text-gray-600 hover:bg-gray-100">-</button>
+                        <input type="text" value="1" class="w-full text-center outline-none font-bold text-gray-700" readonly>
+                        <button class="px-3 py-1 text-xl text-gray-600 hover:bg-gray-100">+</button>
+                    </div>
+                </div>
+
+                <!-- BOTONES DE COMPRA (CTAs) -->
+                <div class="flex flex-col gap-3 mb-8">
+                    <!-- Botón 1: Agregar al carrito (Estilo Secundario) -->
+                    <a href="https://go.hotmart.com/Q106304147S" class="w-full text-center border-2 border-gray-900 text-gray-900 bg-white hover:bg-gray-900 hover:text-white font-bold py-4 px-6 rounded-md transition duration-300 text-lg uppercase tracking-wide">
+                        Agregar al carrito
+                    </a>
+                    
+                    <!-- Botón 2: Comprar Ahora (Estilo Principal Urgente) -->
+                    <a href="https://go.hotmart.com/Q106304147S" class="w-full text-center bg-red-600 hover:bg-red-700 text-white font-black py-4 px-6 rounded-md shadow-lg btn-shake text-lg uppercase tracking-wide flex justify-center items-center gap-2">
+                        COMPRAR AHORA <i class="fas fa-bolt text-yellow-300"></i>
+                    </a>
+
+                    <!-- Botón 3: Estilo Pago al Recibir (Adaptado a digital) -->
+                    <a href="https://go.hotmart.com/Q106304147S" class="w-full text-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-md shadow transition duration-300 text-md uppercase">
+                        PAGO 100% SEGURO CON HOTMART
+                    </a>
+                </div>
+
+                <!-- Info de Seguridad -->
+                <div class="bg-gray-50 p-4 rounded border border-gray-200 mb-8 text-sm text-gray-700 flex flex-col gap-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-shield-alt text-xl text-gray-400"></i>
+                        <span>Compra Segura y Protegida. Cifrado SSL.</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-undo text-xl text-gray-400"></i>
+                        <span>Garantía de reembolso de 7 días.</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope-open-text text-xl text-gray-400"></i>
+                        <span>Recibes tus credenciales de acceso de inmediato en tu correo.</span>
+                    </div>
+                </div>
+
+                <!-- ALERTA DE ALTA DEMANDA -->
+                <div class="bg-red-50 border-l-4 border-red-600 p-4 mb-8">
+                    <p class="font-bold text-red-800 text-lg mb-1">⚠️ ATENCIÓN ⚠️</p>
+                    <p class="text-red-700">¡Este programa es de <strong>ALTA DEMANDA!</strong><br> 🚨 ¡NO DEJES PASAR ESTA OPORTUNIDAD CON 80% DE DESCUENTO! 🚨</p>
+                </div>
+
+                <!-- SECCIÓN DE DESCRIPCIÓN Y BENEFICIOS -->
+                <div class="pt-6 border-t border-gray-200 mb-0">
+                    <h2 class="text-xl md:text-2xl font-bold mb-6 text-gray-900 uppercase tracking-wide">🔹 ¿Qué aprenderás?</h2>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <div class="bg-green-100 text-green-600 p-1 rounded-full mt-1"><i class="fas fa-check text-sm"></i></div>
+                            <span class="text-gray-700 font-medium">Qué es ChatGPT y cómo funciona.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="bg-green-100 text-green-600 p-1 rounded-full mt-1"><i class="fas fa-check text-sm"></i></div>
+                            <span class="text-gray-700 font-medium">Cómo hacer preguntas y obtener respuestas precisas.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="bg-green-100 text-green-600 p-1 rounded-full mt-1"><i class="fas fa-check text-sm"></i></div>
+                            <span class="text-gray-700 font-medium">Usos prácticos de ChatGPT para la vida diaria y el trabajo.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="bg-green-100 text-green-600 p-1 rounded-full mt-1"><i class="fas fa-check text-sm"></i></div>
+                            <span class="text-gray-700 font-medium">Consejos para sacarle el máximo provecho sin complicaciones.</span>
+                        </li>
+                    </ul>
+
+                    <h3 class="text-lg font-bold mb-4 text-gray-900">🌟 Este curso es para ti si…</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-double text-red-500 mt-1"></i> 
+                            <span class="text-gray-600 text-sm">Nunca has usado ChatGPT y quieres aprender desde cero.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-double text-red-500 mt-1"></i> 
+                            <span class="text-gray-600 text-sm">Quieres mejorar tu productividad con la ayuda de la IA.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-double text-red-500 mt-1"></i> 
+                            <span class="text-gray-600 text-sm">Buscas una forma fácil de interactuar con inteligencia artificial.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-double text-red-500 mt-1"></i> 
+                            <span class="text-gray-600 text-sm">Te interesa descubrir cómo la IA puede hacer tu vida más fácil.</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="text-center bg-red-50 border border-red-200 p-4 rounded-lg mt-6">
+                        <p class="font-semibold text-red-800">📌 Accede ahora y aprende a usar ChatGPT de manera sencilla y efectiva. 🚀</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- GALERÍA DE COMPRADORES (Buyer show image estilo Maka) -->
+    <section class="bg-gray-50 pt-4 pb-10 px-4 overflow-hidden border-b border-gray-200">
+        <h3 class="text-center text-gray-500 font-bold mb-6 text-sm uppercase">Lo que la gente está creando</h3>
+        <div class="flex gap-4 overflow-x-auto hide-scrollbar snap-x max-w-7xl mx-auto pb-4">
+            <!-- Cajas simulando imágenes de clientes -->
+            <div class="min-w-[150px] md:min-w-[200px] aspect-square bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden border snap-center shadow-sm">
+                <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt8.png" alt="Foto Cliente 1" class="w-full h-full object-cover">
+            </div>
+            <div class="min-w-[150px] md:min-w-[200px] aspect-square bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden border snap-center shadow-sm">
+                <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt9.png" alt="Foto Cliente 2" class="w-full h-full object-cover">
+            </div>
+            <div class="min-w-[150px] md:min-w-[200px] aspect-square bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden border snap-center shadow-sm">
+                <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt.png1.png" alt="Foto Cliente 3" class="w-full h-full object-cover">
+            </div>
+            <div class="min-w-[150px] md:min-w-[200px] aspect-square bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden border snap-center shadow-sm">
+                <img src="https://www.sotcarga.com/downloads/kaivie%20productos/cursogpt16.png" alt="Foto Cliente 4" class="w-full h-full object-cover">
+            </div>
+            <div class="min-w-[150px] md:min-w-[200px] aspect-square bg-gray-200 rounded-lg flex items-center justify-center border text-gray-400 font-bold snap-center shadow-sm">
+                [Foto Cliente 5]
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE LA ACADEMIA -->
+    <section class="py-16 px-4 bg-white border-b border-gray-200">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Conoce Nuestra Academia</h2>
+                <p class="text-gray-600 text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
+                    Nuestra academia es una mezcla maravillosa de sabiduría científica y espiritual, basada en las enseñanzas de grandes autores como <strong>Gerardo Schmedling</strong> y <strong>Wayne Dyer</strong>. Tenemos más de 50 cursos, una videoteca llena de contenido y, lo mejor de todo, clases en vivo todos los martes y miércoles a las 6 pm (hora Colombia). Ahí conocerás personas increíbles de toda Hispanoamérica, con las que podrás compartir experiencias y reflexiones profundas (y quizá alguna que otra carcajada).
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Qué te ofrecemos -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+                    <h3 class="text-2xl font-bold mb-6 text-red-700">¿Qué te ofrecemos?</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <div class="bg-red-100 text-red-600 p-2 rounded-full mt-1"><i class="fas fa-video text-sm"></i></div>
+                            <span><strong>Cursos en vivo y grabados:</strong> Aprende a tu ritmo y repasa siempre que lo necesites.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="bg-red-100 text-red-600 p-2 rounded-full mt-1"><i class="fas fa-chalkboard-teacher text-sm"></i></div>
+                            <span><strong>Webinars gratuitos:</strong> Porque siempre es bueno probar antes de comprometerse.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="bg-red-100 text-red-600 p-2 rounded-full mt-1"><i class="fas fa-users text-sm"></i></div>
+                            <span><strong>Comunidad activa:</strong> Encuentra apoyo en cada paso de tu crecimiento personal.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="bg-red-100 text-red-600 p-2 rounded-full mt-1"><i class="fas fa-hands-helping text-sm"></i></div>
+                            <span><strong>Acompañamiento 1 a 1:</strong> Nuestros expertos te guiarán en todo momento.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- A quién está dirigida -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-6 text-red-700">¿A quién está dirigida la academia?</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        A personas que sienten que la vida podría ser más plena y quieren herramientas para mejorar en salud, relaciones, recursos y adaptación.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        No importa si eres experto en temas holísticos o estás empezando: <strong>aquí todos avanzamos juntos.</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA Academia -->
+            <div class="text-center bg-red-600 text-white p-8 md:p-12 rounded-3xl shadow-xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 opacity-10">
+                    <i class="fas fa-graduation-cap text-9xl"></i>
+                </div>
+                <p class="text-xl md:text-2xl font-semibold mb-8 relative z-10">
+                    💡 Así que, ¿qué esperas? ¡Únete a nuestra comunidad, empieza tu camino de transformación y conecta con gente que busca lo mismo que tú!
+                </p>
+                <a href="https://go.hotmart.com/Q106304147S" class="relative z-10 inline-block bg-white text-red-600 font-black py-4 px-10 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 text-xl uppercase tracking-wide btn-shake">
+                    🎯 ¡Inscríbete ahora!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESEÑAS DE CLIENTES (Sección de Comentarios) -->
+    <section id="reviews" class="py-16 px-4 max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Comentarios de los clientes</h2>
+        
+        <!-- Resumen de Reseñas -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
+            <div class="text-center">
+                <span class="text-5xl font-black">4.8</span>
+                <div class="text-yellow-400 text-xl my-2">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="text-gray-500 text-sm">11 reseñas</p>
+            </div>
+            <div class="w-full md:w-64 space-y-2 text-sm text-gray-600">
+                <div class="flex items-center gap-2"><span>5 estrellas</span><div class="h-2 bg-gray-200 flex-1 rounded"><div class="h-2 bg-yellow-400 rounded" style="width: 85%"></div></div><span>9</span></div>
+                <div class="flex items-center gap-2"><span>4 estrellas</span><div class="h-2 bg-gray-200 flex-1 rounded"><div class="h-2 bg-yellow-400 rounded" style="width: 15%"></div></div><span>2</span></div>
+                <div class="flex items-center gap-2"><span>3 estrellas</span><div class="h-2 bg-gray-200 flex-1 rounded"></div><span>0</span></div>
+                <div class="flex items-center gap-2"><span>2 estrellas</span><div class="h-2 bg-gray-200 flex-1 rounded"></div><span>0</span></div>
+                <div class="flex items-center gap-2"><span>1 estrella</span><div class="h-2 bg-gray-200 flex-1 rounded"></div><span>0</span></div>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center border-b pb-4 mb-6">
+            <button class="bg-gray-900 text-white px-4 py-2 rounded text-sm font-bold">Escriba un comentario</button>
+            <select class="border p-2 rounded text-sm text-gray-700 outline-none">
+                <option>Ordenar por Destacados</option>
+                <option>El más nuevo</option>
+            </select>
+        </div>
+
+        <!-- Lista de Comentarios -->
+        <div class="space-y-6">
+            <!-- Reseña 1 -->
+            <div class="border-b pb-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="bg-gray-300 text-gray-700 font-bold w-10 h-10 rounded-full flex items-center justify-center">ST</div>
+                    <div>
+                        <p class="font-bold text-gray-900">Sandra T.</p>
+                        <div class="text-yellow-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mt-2">Muy recomendado, excelente el material y el acceso llegó súper rápido a mi correo. Ya empecé a aplicar los prompts.</p>
+            </div>
+            
+            <!-- Reseña 2 -->
+            <div class="border-b pb-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="bg-gray-300 text-gray-700 font-bold w-10 h-10 rounded-full flex items-center justify-center">AG</div>
+                    <div>
+                        <p class="font-bold text-gray-900">Ana G. n.</p>
+                        <div class="text-yellow-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mt-2">Buenas tardes, compré el curso pero no encontraba los bonos. Soporte me respondió en 5 minutos y me indicaron dónde descargarlos. ¡Excelente servicio y el contenido es una locura!</p>
+            </div>
+
+            <!-- Reseña 3 -->
+            <div class="border-b pb-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="bg-gray-300 text-gray-700 font-bold w-10 h-10 rounded-full flex items-center justify-center">JV</div>
+                    <div>
+                        <p class="font-bold text-gray-900">Jeimi V.</p>
+                        <div class="text-yellow-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mt-2">Lo mejor que he comprado en temas de IA, está súper bueno y muy directo al grano. Sin tanta teoría aburrida.</p>
+            </div>
+
+            <!-- Reseña 4 -->
+            <div class="border-b pb-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="bg-gray-300 text-gray-700 font-bold w-10 h-10 rounded-full flex items-center justify-center">CF</div>
+                    <div>
+                        <p class="font-bold text-gray-900">Carlos F.</p>
+                        <div class="text-yellow-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="text-gray-700 mt-2">Me gustó mucho la estrategia, si es contenido de alto valor, pensé que iba a ser básico pero me sorprendió el nivel de detalle.</p>
+            </div>
+        </div>
+        
+        <div class="mt-8 flex justify-center gap-2">
+            <span class="w-8 h-8 flex items-center justify-center bg-gray-900 text-white rounded cursor-pointer">1</span>
+            <span class="w-8 h-8 flex items-center justify-center border hover:bg-gray-100 rounded cursor-pointer">2</span>
+            <span class="w-8 h-8 flex items-center justify-center border hover:bg-gray-100 rounded cursor-pointer">3</span>
+        </div>
+    </section>
+
+    <!-- FOOTER E-COMMERCE -->
+    <footer class="bg-gray-50 border-t border-gray-200 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="text-2xl font-black tracking-tighter text-gray-900 mb-6">
+                AI<span class="text-red-700">ACADEMY</span>
+            </div>
+            
+            <div class="flex justify-center items-center gap-4 text-3xl text-gray-400 mb-8">
+                <i class="fab fa-cc-visa hover:text-blue-600 transition"></i>
+                <i class="fab fa-cc-mastercard hover:text-orange-500 transition"></i>
+                <i class="fab fa-cc-paypal hover:text-blue-500 transition"></i>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm text-gray-500 mb-6 font-medium">
+                <a href="#" class="hover:text-gray-900">Política de privacidad</a>
+                <a href="#" class="hover:text-gray-900">Términos del servicio</a>
+                <a href="#" class="hover:text-gray-900">Política de reembolso</a>
+                <a href="#" class="hover:text-gray-900">Contacto</a>
+            </div>
+            
+            <p class="text-xs text-gray-400">© 2026, AIAcademy. Tecnología de Hotmart.</p>
+            <p class="text-[10px] text-gray-400 mt-2 max-w-2xl mx-auto">Este sitio no es parte del sitio web de Facebook, Meta, OpenAI o ChatGPT. Además, este sitio NO está respaldado por Facebook o OpenAI de ninguna manera.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN STICKY MOBILE COMPRAR AHORA -->
+    <div class="fixed bottom-0 left-0 right-0 p-3 bg-white border-t shadow-[0_-5px_15px_rgba(0,0,0,0.1)] md:hidden z-50">
+        <a href="https://go.hotmart.com/Q106304147S" class="block w-full text-center bg-red-600 text-white font-black py-3 rounded text-lg uppercase tracking-wide btn-shake">
+            Comprar Ahora - $ 90.660
+        </a>
+    </div>
+
+    <!-- SCRIPT DEL TEMPORIZADOR -->
+    <script>
+        function updateTimer() {
+            const now = new Date();
+            // Calcula el tiempo restante hasta las 23:59:59 del día actual
+            const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+            let diff = endOfDay - now;
+            
+            if (diff < 0) diff = 0;
+            
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById("top-timer").innerText = 
+                String(h).padStart(2, '0') + ":" + 
+                String(m).padStart(2, '0') + ":" + 
+                String(s).padStart(2, '0');
+        }
+        
+        setInterval(updateTimer, 1000);
+        updateTimer(); // Llama a la función inmediatamente para no esperar 1 segundo
+    </script>
+</body>
+</html>
