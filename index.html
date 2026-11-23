@@ -1,774 +1,304 @@
-<!DOCTYPE html><html class="dark scroll-smooth" lang="es"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Sotcarga S.A.S - Software ERP de Transporte y Logística Sísifo | RNDC</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..800;1,300..800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "on-primary": "#002c72",
-            "surface-container-highest": "#253457",
-            "surface-container-low": "#0a1a3c",
-            "on-primary-fixed-variant": "#0040a0",
-            "error": "#ffb4ab",
-            "outline": "#8c90a0",
-            "inverse-surface": "#dae2ff",
-            "primary": "#b1c5ff",
-            "surface-container": "#0f1e40",
-            "surface": "#021134",
-            "surface-container-high": "#1a294b",
-            "tertiary": "#26dec2",
-            "surface-variant": "#253457",
-            "background": "#021134",
-            "primary-container": "#1d6bf3",
-            "surface-bright": "#2a385b",
-            "surface-container-lowest": "#000c2b",
-            "brand-orange": "#ff6600",
-            "brand-orange-hover": "#e65c00"
-          },
-          fontFamily: {
-            "headline": ["Space Grotesk", "sans-serif"],
-            "body": ["Hanken Grotesk", "sans-serif"],
-            "mono": ["JetBrains Mono", "monospace"]
-          }
-        }
-      }
-    };
-  </script>
-<style>
-    @layer base {
-      html, body {
-        margin: 0;
-        padding: 0;
-        background-color: #021134;
-        color: #dae2ff;
-        font-family: 'Hanken Grotesk', sans-serif;
-      }
-    }
-    .sotcarga-topbar {
-      background: linear-gradient(180deg, #3d5885 0%, #20355f 30%, #0d1e44 70%, #05132d 100%);
-      border-bottom: 1px solid rgba(147, 185, 237, 0.28);
-      box-shadow: 0 4px 22px rgba(2, 8, 24, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-    }
-    .btn-sotcarga-orange {
-      background: linear-gradient(180deg, #ff7a00 0%, #e05800 100%);
-      border: 1px solid #ff9133;
-      box-shadow: 0 2px 8px rgba(235, 94, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
-    }
-    .btn-sotcarga-orange:hover {
-      background: linear-gradient(180deg, #ff881a 0%, #cc4e00 100%);
-      box-shadow: 0 4px 14px rgba(255, 102, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.45);
-    }
-    .animated-sotcarga-logo {
-      filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.45));
-      transition: transform 0.3s ease;
-    }
-    .animated-sotcarga-logo:hover {
-      transform: scale(1.05);
-    }
-    .device-glow {
-      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(29, 107, 243, 0.25);
-    }
-    .mosaic-pattern {
-      background-image: radial-gradient(rgba(177, 197, 255, 0.12) 1px, transparent 1px);
-      background-size: 16px 16px;
-    }
-  </style>
-</head>
-<body class="bg-[#021134] text-[#dae2ff] font-body antialiased selection:bg-brand-orange selection:text-white">
-<!-- 1. ENCABEZADO SUPERIOR (Header Principal con gradiente y estilo clásico Sotcarga) -->
-<header class="sticky top-0 left-0 right-0 h-20 py-4 sotcarga-header-gradient sotcarga-topbar z-50 flex items-center justify-between px-3 sm:px-4 md:px-6 gap-2 sm:gap-4"><div class="flex items-center gap-2 sm:gap-3 min-w-0"><div class="relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shrink-0 rounded-full overflow-hidden bg-transparent"><img alt="SOTCARGA SAS Logo" class="w-full h-full object-contain block animated-sotcarga-logo drop-shadow-sm" src="https://www.sotcarga.com/images/sotcarga.gif" style="mix-blend-mode: screen; background: transparent; object-fit: cover;"></div><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-2 sm:gap-2.5 flex-wrap"><span class="leading-tight text-white font-extrabold tracking-tight drop-shadow-sm uppercase text-2xl sm:text-3xl lg:text-4xl">SOTCARGA S.A.S</span><span class="inline font-mono text-[10px] sm:text-xs bg-[#1d4ed8]/30 text-blue-200 border border-blue-500/40 px-2 py-0.5 rounded font-semibold whitespace-nowrap tracking-wider">ERP SÍSIFO</span></div></div></div><div class="hidden sm:flex flex-1 max-w-xl lg:max-w-2xl mx-2 md:mx-auto items-center justify-center"></div><div class="hidden xl:flex items-center gap-2 shrink-0"><a class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000c2b]/50 border border-white/20 text-white text-sm hover:bg-white/10 hover:border-blue-400/50 transition-all shadow-sm" href="#soluciones-empresariales"><span class="material-symbols-outlined text-[18px] text-blue-300">corporate_fare</span><span class="font-medium whitespace-nowrap">Quiénes somos</span></a><a class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#000c2b]/50 border border-white/20 text-white text-sm hover:bg-white/10 hover:border-blue-400/50 transition-all shadow-sm" href="#contacto-footer"><span class="material-symbols-outlined text-[18px] text-blue-300">contact_support</span><span class="font-medium whitespace-nowrap">Contáctenos</span></a></div><div class="flex items-center gap-2 sm:gap-3 justify-end shrink-0"><a class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#000c2b]/50 border border-white/20 text-white font-mono text-sm hover:border-emerald-500/60 transition-colors" href="https://wa.me/573227145200" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.28 4.95L2 22l5.22-1.3c1.45.75 3.08 1.18 4.82 1.18 5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.82 14.22c-.24.67-1.39 1.28-1.92 1.34-.51.05-1.16.08-3.75-.98-3.13-1.28-5.14-4.47-5.3-4.68-.16-.21-1.27-1.69-1.27-3.23 0-1.54.8-2.3 1.09-2.61.29-.31.64-.39.85-.39.21 0 .43 0 .61.01.2.01.46-.07.72.55.27.64.91 2.22.99 2.38.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.16-.33.33-.14.65.19.32.84 1.38 1.8 2.24 1.24 1.1 2.28 1.44 2.61 1.6.33.16.53.13.72-.08.2-.22.84-.98 1.07-1.32.22-.33.45-.28.76-.16.31.12 1.99.94 2.33 1.11.34.17.57.26.65.4.08.14.08.82-.16 1.49z"></path></svg><span class="text-white/95 font-medium whitespace-nowrap">WS 3227145200</span></a><a href="#modulo-sesion" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/30 text-white text-sm hover:bg-white/20 transition-all shadow-inner"><span class="material-symbols-outlined text-white text-[18px]">person</span><span class="font-medium whitespace-nowrap">Inicio de sesión</span></a></div></header><nav class="sticky top-20 left-0 right-0 z-40 bg-[#081838]/95 backdrop-blur-md border-b border-blue-500/20 shadow-md hidden lg:block"><div class="max-w-7xl mx-auto px-4 flex items-center justify-between"><ul class="flex items-center gap-1 text-sm font-medium text-blue-200"><li class="relative group"><a href="#" class="px-3 py-2.5 flex items-center text-white hover:text-white transition-colors border-b-2 border-brand-orange font-semibold">Inicio</a></li><li class="relative group"><a href="#manuales-oficiales" class="px-3 py-2.5 flex items-center hover:text-white transition-colors">Link de descarga</a></li><li class="relative group"><a href="#soluciones-empresariales" class="px-3 py-2.5 flex items-center hover:text-white transition-colors">App transporte</a></li><li class="relative group"><a href="#soluciones-empresariales" class="px-3 py-2.5 flex items-center hover:text-white transition-colors">Empresas de paqueteo</a></li><li class="relative group"><a href="#soluciones-empresariales" class="px-3 py-2.5 flex items-center hover:text-white transition-colors">Desarrollo a la medida</a></li><li class="relative group"><a href="#soluciones-empresariales" class="px-3 py-2.5 flex items-center hover:text-white transition-colors">Transporte de carga</a></li><li class="relative group"><button type="button" class="px-3 py-2.5 flex items-center gap-1 hover:text-white transition-colors focus:outline-none"><span>Software de transporte</span><span class="material-symbols-outlined text-[16px] text-blue-300 group-hover:rotate-180 transition-transform">expand_more</span></button><div class="absolute left-0 top-full w-80 bg-[#0a1a3c] border border-blue-500/30 rounded-xl shadow-2xl p-3 hidden group-hover:block transition-all z-50"><div class="text-[11px] font-bold text-brand-orange uppercase tracking-wider mb-2 px-2">Módulos &amp; Capacidades</div><div class="grid grid-cols-2 gap-1 text-[12px]"><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Sísifo operativo</a><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Rastreo de guías</a><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Mantenimiento vehícular</a><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Transporte de carga</a><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Desarrollo a la medida</a><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Aplicaciones móviles</a><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Sistemas seguimiento</a><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Software por lotes</a><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Sísifo contable</a><a href="#facturacion-rndc" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Factura electrónica</a><a href="#manuales-oficiales" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Nómina</a><a href="#software-catalogo" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Trazabilidad</a><a href="#facturacion-rndc" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">RNDC</a><a href="#video-hero" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Manifiestos</a><a href="#facturacion-rndc" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">UIAF</a><a href="#facturacion-rndc" class="p-1.5 rounded hover:bg-[#1a294b] hover:text-white transition-colors">Siplaft</a></div></div></li><li class="relative group"><a href="#software-catalogo" class="px-3 py-2.5 flex items-center hover:text-white transition-colors">Proyectos</a></li><li class="relative group"><a href="#video-hero" class="px-3 py-2.5 flex items-center text-blue-300 font-semibold hover:text-white transition-colors">Tutoriales</a></li></ul><div class="flex items-center gap-2"><a href="https://wa.me/573227145200" target="_blank" class="px-3 py-1.5 text-sm rounded-lg btn-sotcarga-orange text-white font-semibold flex items-center gap-1.5 shadow-md"><span class="material-symbols-outlined text-[16px]">chat</span><span>Solicitar Cotización</span></a></div></div></nav>
-<!-- MENÚ LATERAL DESPLEGABLE / DRAWER MÓVIL (Con ítems de la barra original vista en las capturas) -->
-<div class="fixed inset-0 bg-black/80 z-50 hidden backdrop-blur-sm transition-opacity" id="mobileDrawerBackdrop"></div>
-<aside class="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-[#0a1a3c] border-r border-blue-500/30 z-50 p-5 transform -translate-x-full transition-transform duration-300 flex flex-col justify-between overflow-y-auto" id="mobileDrawer">
-<div class="flex flex-col gap-4">
-<div class="flex items-center justify-between border-b border-blue-500/20 pb-3">
-<div class="flex items-center gap-2">
-<img alt="Sotcarga" class="w-8 h-8 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqP5-jlj8mAA6a9BOpt8m_5GVYbD3GPdP72k2AFuuYrv-myTE9YrdZFD_3UzzWFZVqNCDexCM7aoVekjYkDqMiybSnApXHBAIK54CJ98sCVnW2CG_N_y8DU4LR42aPRPv9RrgUvbjifU3tfG3cY1LrbsC8SyiSti4UIto4Qm26uUemFBaWW-r_5BEm4K1G2hLxJiwtcw9RumkWeye9VQeXMB7g4M16DQhTBgnwDA0" style="mix-blend-mode: screen;">
-<span class="font-headline font-bold text-lg text-white">SOTCARGA S.A.S</span>
+<!DOCTYPE html><html class="dark scroll-smooth" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.sotcarga-header-gradient {
+  background: linear-gradient(180deg, #3d5885 0%, #20355f 30%, #0d1e44 70%, #05132d 100%);
+  border-bottom: 1px solid rgba(147, 185, 237, 0.28);
+  box-shadow: 0 4px 22px rgba(2, 8, 24, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.btn-sotcarga-orange {
+  background: linear-gradient(180deg, #ff7a00 0%, #e05800 100%);
+  border: 1px solid #ff9133;
+  box-shadow: 0 2px 8px rgba(235, 94, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn-sotcarga-orange:hover {
+  background: linear-gradient(180deg, #ff881a 0%, #cc4e00 100%);
+  box-shadow: 0 4px 14px rgba(255, 102, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"navy-bg":"#05132d","navy-surface":"#0a1b3d","navy-card":"#0e224b","navy-header":"#122753","navy-border":"#1a3365","navy-border-subtle":"#132850","navy-muted":"#9bb2d6","navy-text":"#f1f6ff","orange-brand":"#ff6600","orange-light":"#ff8533","orange-hover":"#ea580c","semantic-danger":"#EF4444","on-tertiary":"#ffffff","on-background":"#f1f6ff","outline":"#6782ad","semantic-success":"#10B981","surface-tint":"#ff6600","primary":"#f1f6ff","primary-container":"#ff6600","surface-container-low":"#071633","surface-container-lowest":"#030e24","surface-variant":"#102552","secondary-container":"#ff6600","on-secondary":"#ffffff","surface-container-highest":"#1d386d","on-error":"#ffffff","on-surface":"#f1f6ff","surface-container-high":"#0e224b","surface-bright":"#1e3b74","background":"#05132d","error":"#f87171","semantic-warning":"#F59E0B","on-surface-variant":"#9bb2d6","border-subtle":"#1a3365","border-strong":"#2a4b88","secondary":"#ff6600"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"1rem","space-lg":"1.25rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-desktop":"1.5rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","margin-tablet":"1.5rem","margin-desktop":"2rem"},fontFamily:{"body-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Inter"],"data-mono":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"600"}],"data-mono":["12px",{lineHeight:"16px",letterSpacing:"0",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}]}}}}</script><style>.animated-sotcarga-logo { filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.45)); transition: transform 0.3s ease; } @keyframes sotcarga-pulse-spin { 0% { filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4)); } 50% { filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.7)); } 100% { filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4)); } } .animated-sotcarga-logo:hover { transform: scale(1.05); }</style><style>@keyframes ai-gradient-flow{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}.ai-glow-btn{position:relative;z-index:1;transition:box-shadow 0.3s ease,transform 0.2s ease;}.ai-glow-btn::before{content:"";position:absolute;inset:-1.5px;border-radius:inherit;padding:1.5px;background:linear-gradient(120deg,#22d3ee,#3b82f6,#8b5cf6,#22d3ee);background-size:300% 300%;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0.45;animation:ai-gradient-flow 4s ease infinite;transition:opacity 0.3s ease,filter 0.3s ease;pointer-events:none;z-index:-1;}.ai-glow-btn:hover::before{opacity:1;filter:brightness(1.2);}.ai-glow-btn:hover{box-shadow:0 0 14px rgba(34,211,238,0.35),0 0 24px rgba(139,92,246,0.25);}</style></head><body class="bg-navy-bg font-body-md text-navy-text antialiased" style="background-image: linear-gradient(rgba(8, 19, 41, 0.75), rgba(8, 19, 41, 0.88)), url(&quot;https://lh3.googleusercontent.com/aida/ALJJyrBkk2C9pd-yqek3TOpZAmep4ehyaSlmaJ0D6pFXtJjjSrmgodEACI5SjD9ysCyaJxc9vjgdrrIMcHPnYJYjBdt_aOyaxj4GXpdTAXG0Bc4pjm9Ivr3kMy6tJ_-xuAZrfGfm-gv7hOhFTkrtOSuFkCxG5_g076uYTU2zv3dPRcbEYjsYC9ivOwchPQ-v7yYe_Pq_-GxgKlS8v4CWQdxXjDQC7Z1SwjzrUUBfIiqYF24&quot;); background-attachment: fixed; background-size: cover; background-position: center top; background-repeat: no-repeat;"><header class="fixed top-0 left-0 right-0 h-20 py-4 sotcarga-header-gradient z-50 flex items-center justify-between px-3 sm:px-4 md:px-margin-desktop gap-2 sm:gap-4"><div class="flex items-center gap-2 sm:gap-space-md min-w-0"><button aria-label="Abrir menú" class="p-space-xs rounded-lg text-white/90 hover:bg-white/10 hover:text-white transition-colors flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-400" id="btnMobileMenu" type="button"><span class="material-symbols-outlined text-[28px]">menu</span></button><div class="flex items-center gap-2 sm:gap-3 min-w-0"><div class="relative sm:w-11 sm:h-11 flex items-center justify-center shrink-0 w-12 h-12" style="border-radius: 9999px; overflow: hidden; clip-path: circle(50%); background: transparent;"><img alt="SOTCARGA SAS Logo" class="w-full h-full object-contain block animated-sotcarga-logo drop-shadow-sm" src="https://www.sotcarga.com/images/sotcarga.gif" style="border-radius: 9999px; clip-path: circle(50%); mix-blend-mode: screen; background: transparent; object-fit: cover;"></div><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-1.5 sm:gap-2"><span class="leading-tight text-white font-extrabold tracking-tight drop-shadow-sm uppercase text-xl sm:text-2xl lg:text-[34px]">Sotcarga S.A.S&nbsp;</span><span class="hidden sm:inline font-data-mono text-data-mono bg-[#1d4ed8]/30 text-blue-200 border border-blue-500/40 px-space-xs rounded font-semibold text-[10px] sm:text-data-mono whitespace-nowrap">ERP SÍSIFO</span></div><span class="hidden md:block font-label-sm text-label-sm text-blue-200/80 font-medium leading-tight truncate">Video &amp; Manuales Operativos</span></div></div></div><div class="hidden sm:flex flex-1 max-w-xl lg:max-w-2xl mx-2 md:mx-auto items-center justify-center"><nav class="flex items-center gap-2 md:gap-3 text-white font-body-md font-semibold tracking-wide"><a href="#" class="flex items-center justify-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-navy-text transition-colors ai-glow-btn">Inicio</a><a href="#" class="flex items-center justify-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-navy-text transition-colors whitespace-nowrap ai-glow-btn">Quiénes somos</a><a href="#" class="flex items-center justify-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-navy-text transition-colors whitespace-nowrap ai-glow-btn">Contáctenos</a><a href="#" class="flex items-center justify-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-navy-text transition-colors ai-glow-btn" title="Mensajes / Contacto"><span class="material-symbols-outlined text-[20px]">mail</span></a></nav></div><div class="flex items-center gap-2 sm:gap-space-md justify-end shrink-0"><div class="relative flex items-center"><button class="p-space-xs rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-colors relative flex items-center justify-center" type="button"><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span></button></div><a href="#" class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/30 bg-white/15 hover:bg-white/10 text-white font-label-md text-label-md transition-colors cursor-pointer shadow-inner ai-glow-btn"><span class="material-symbols-outlined text-white text-[18px]">person</span><span class="font-medium whitespace-nowrap">Inicio de sesión</span></a></div></header><div class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden transition-opacity duration-300 lg:hidden" id="sidebarBackdrop"></div><aside class="fixed left-0 top-0 lg:top-20 bottom-0 w-72 sm:w-80 lg:w-64 bg-navy-surface border-r border-navy-border shadow-2xl z-50 lg:z-40 flex flex-col py-space-md overflow-y-auto -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out" id="sidebarDrawer" style="background: linear-gradient(rgba(28, 38, 77, 0.95) 0%, rgba(18, 25, 56, 0.96) 60%, rgba(10, 16, 40, 0.98) 100%); backdrop-filter: blur(12px); box-shadow: rgba(0, 0, 0, 0.6) 4px 0px 24px, rgba(147, 185, 237, 0.15) -1px 0px 1px inset;"><div class="flex items-center justify-between px-space-md pb-space-sm mb-space-xs border-b border-navy-border lg:hidden"><div class="flex items-center gap-2"><div class="w-8 h-8 flex items-center justify-center shrink-0" style="border-radius: 9999px; overflow: hidden; clip-path: circle(50%); background: transparent;"><img alt="SOTCARGA SAS Logo" class="w-full h-full object-contain block animated-sotcarga-logo drop-shadow-sm" src="https://www.sotcarga.com/images/sotcarga.gif" style="border-radius: 9999px; clip-path: circle(50%); mix-blend-mode: screen; background: transparent; object-fit: cover;"></div><span class="font-headline-sm text-headline-sm text-white font-bold tracking-tight">SOTCARGA ERP</span></div><button aria-label="Cerrar menú" class="p-1 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors flex items-center justify-center" id="btnCloseSidebar" type="button"><span class="material-symbols-outlined text-[24px]">close</span></button></div><nav class="flex flex-col gap-space-xs px-space-md flex-1" id="sidebarNav"><div class="flex flex-col py-2 px-1 text-white font-body-md select-none"><a href="#" class="px-4 py-3 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/10 rounded transition-colors block">Inicio</a><a href="#" class="px-4 py-3 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/10 rounded transition-colors block">Link de descarga</a><a href="#" class="px-4 py-3 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/10 rounded transition-colors block">App transporte</a><a href="#" class="px-4 py-3 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/10 rounded transition-colors block">Empresas de paqueteo</a><a href="#" class="px-4 py-3 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/10 rounded transition-colors block">Desarrollo a la medida</a><a href="#" class="px-4 py-3 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/10 rounded transition-colors block">Transporte de carga</a><div class="group relative"><a href="#" class="px-4 py-3 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/10 rounded transition-colors flex items-center justify-between"><span>Software de transporte</span><span class="text-[11px] text-white/80 group-hover:text-white transition-colors">▶</span></a></div><div class="group relative"><a href="#" class="px-4 py-3 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/10 rounded transition-colors flex items-center justify-between"><span>Proyectos</span><span class="text-[11px] text-white/80 group-hover:text-white transition-colors">▶</span></a></div></div><div class="mt-4 mx-3 p-space-md rounded-xl bg-navy-card/90 border border-blue-500/30 flex flex-col gap-space-xs shadow-lg"><div class="flex items-center gap-space-xs text-blue-300 font-headline-sm text-[14px] font-bold"><span class="material-symbols-outlined text-[18px]">support_agent</span><span class="text-white">Contactenos</span></div><a class="flex items-center gap-space-xs font-data-mono text-[12px] text-emerald-400 font-semibold hover:underline mt-1" href="https://wa.me/573227145200" rel="noopener noreferrer" target="_blank"><span>+(57) 322-7145200</span></a></div></nav></aside><div class="pl-0 lg:pl-64 transition-all duration-300"><main class="w-full pt-20 px-4 sm:px-6 lg:px-gutter-desktop pb-space-xl min-h-screen bg-navy-bg/50"><div class="flex flex-col w-full mx-auto">
+<!-- Horizontal Category Filters (YouTube style sticky chips bar) -->
+
+<!-- Featured Master Tutorial (Cinema Spotlight) -->
+<section class="mb-space-xl" id="video-principal" style="scroll-margin-top: 130px;">
+<div class="bg-navy-surface border border-navy-border hover:border-orange-500/50 transition-colors rounded-xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 group">
+<!-- Media Player Stage -->
+<div class="relative lg:col-span-8 aspect-video bg-navy-bg overflow-hidden flex items-center justify-center cursor-pointer"><video class="w-full h-full object-cover" controls="" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuCXVtGX7FBUPABG-POs5qw3cUOUz6V43czraJTSXht7zOVnCqrb-JruwKgAFiB57e6w_r6Q-G9Goj6NqvCoNOA12ap9wHEK84O32RWS2Sdc_sQt8AOfpyOLGfyr88JBjsuqo2fOJHAWMZSaWNeEj4663qplER6n1GPm9nLWfrjITw77UcxFXQ3VDOkyon1i2ky6JYxgDuYh4mMDte9jV4GYqErgY_YOErj1CLh67c8-nBUj_uCItalq" preload="metadata"><source src="http://www.sotcarga.com/video/VIDEO%20ENTORNO%20SISIFO.mp4" type="video/mp4">Tu navegador no soporta la reproducción de video HTML5.</video><div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none z-10"><span class="px-2.5 py-1 rounded bg-[#1d4ed8] text-white font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5 shadow-md font-semibold border border-blue-400/40">NUEVO TUTORIAL OPERATIVO</span><span class="px-2 py-0.5 rounded bg-navy-header/90 backdrop-blur-md text-blue-200 border border-blue-400/30 font-data-mono text-data-mono font-medium">Módulo RNDC v8.4</span></div></div>
+<!-- Video Details & Attached Resource -->
+<div class="lg:col-span-4 p-space-lg flex flex-col justify-between bg-navy-surface border-t lg:border-t-0 lg:border-l border-navy-border"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-lg bg-blue-500/20 border border-blue-500/40 text-blue-400 flex items-center justify-center font-headline-sm text-headline-sm"><span class="material-symbols-outlined text-[18px]">verified</span></div><div><p class="font-label-md text-label-md text-white font-bold tracking-wide">Soporte Técnico Especializado</p><p class="font-label-sm text-label-sm text-navy-muted">Ministerio de Transporte / RNDC</p></div></div><span class="material-symbols-outlined text-navy-muted hover:text-white cursor-pointer text-[22px]">bookmark_border</span></div><div><h1 class="font-headline-md text-headline-md text-white font-bold leading-tight mt-1">Entorno del Sistema Sísifo de Sotcarga SAS</h1></div><div class="flex items-center gap-3 font-data-mono text-data-mono text-navy-muted"><span class="text-blue-300 font-semibold">2.8k vistas</span><span>•</span><span>Actualizado hace 2 días</span></div></div><!-- Attached Downloadable Manual Box with Blue Button --><div class="mt-space-md pt-space-sm bg-navy-card border border-navy-border p-space-sm rounded-xl flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-10 h-10 rounded-lg bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[24px]">picture_as_pdf</span></div><div class="flex flex-col min-w-0"><a class="font-label-md text-label-md text-navy-text truncate font-semibold hover:text-white hover:underline" href="https://www.sotcarga.com/manuales/pdf%20manual%20sisifo.pdf" target="_blank" rel="noopener noreferrer" download="Manual_Sisifo.pdf" title="Manual General Sísifo ERP">Manual_Sisifo.pdf</a><span class="font-data-mono text-data-mono text-navy-muted text-[11px]">Guía Oficial ERP Sísifo</span></div></div><a class="shrink-0 px-space-md py-2 rounded-lg bg-[#1d4ed8] hover:bg-[#1e40af] text-white font-label-md text-label-md shadow-md transition-all flex items-center gap-1.5 font-semibold border border-blue-400/50" href="https://www.sotcarga.com/manuales/pdf%20manual%20sisifo.pdf" target="_blank" rel="noopener noreferrer" download="pdf manual sisifo.pdf" title="Manual General Sísifo ERP"><span class="material-symbols-outlined text-[16px]">download</span><span>Descargar</span></a></div></div>
 </div>
-<button class="p-1 rounded text-white/70 hover:text-white" id="btnCloseMobileDrawer">
-<span class="material-symbols-outlined text-[24px]">close</span>
+</section>
+<!-- Video Section Header -->
+<div class="flex flex-col gap-space-xl mb-space-xl"><div class="flex flex-col gap-space-lg"><!-- Module 1: Tablas Basicas --><!-- Module 2: Productos --><!-- Module 3: Despachos --><!-- Module 4: Facturacion --><!-- Module 5: Liquidaciones --><!-- Module 6: Consultas --><!-- Module 7: Herramientas de Administracion --><!-- Module 8: Usuario y Contrasena --><!-- Module 9: Contabilidad --><!-- Module 10: Nomina --><!-- Module 11: Documento Soporte --><div class="bg-navy-surface border border-navy-border rounded-xl p-space-lg shadow-md hover:border-orange-500/50 transition-colors module-search-item" id="modulo-documento-soporte" style="scroll-margin-top: 130px;"><div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-navy-border/60 mb-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-orange-500/20 border border-orange-500/50 text-orange-400 flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">description</span></div><div><span class="text-orange-400 font-label-sm font-semibold uppercase tracking-wider block">DIAN Electrónica</span><h3 class="font-headline-md text-headline-md text-white font-bold">Módulo de Documento Soporte</h3><p class="font-data-mono text-data-mono text-navy-muted">Documento soporte electrónico para no obligados a facturar y transmisión DIAN</p></div></div><div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full bg-navy-card border border-orange-500/40 font-data-mono text-data-mono text-orange-400 font-medium">1 video cargado</span><span class="px-2.5 py-1 rounded-full bg-navy-card border border-navy-border font-data-mono text-data-mono text-navy-muted">1 manual PDF</span></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md"><div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-space-md"><div class="bg-navy-card border border-navy-border rounded-xl p-space-sm flex flex-col justify-between hover:border-orange-500/40 transition-colors"><div class="relative aspect-video rounded-lg overflow-hidden bg-navy-bg mb-space-xs"><video class="w-full h-full object-cover rounded-lg" controls="" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuCXVtGX7FBUPABG-POs5qw3cUOUz6V43czraJTSXht7zOVnCqrb-JruwKgAFiB57e6w_r6Q-G9Goj6NqvCoNOA12ap9wHEK84O32RWS2Sdc_sQt8AOfpyOLGfyr88JBjsuqo2fOJHAWMZSaWNeEj4663qplER6n1GPm9nLWfrjITw77UcxFXQ3VDOkyon1i2ky6JYxgDuYh4mMDte9jV4GYqErgY_YOErj1CLh67c8-nBUj_uCItalq" preload="metadata" style="aspect-ratio: 16 / 9; max-height: 220px;"><source src="http://www.sotcarga.com/video/VIDEO%20TUTORIAL%20DOC%20SOPORTE.mp4" type="video/mp4">Tu navegador no soporta el formato de video.</video></div><div class="flex flex-col gap-1"><h4 class="font-headline-sm text-headline-sm text-white truncate font-semibold">Documento Soporte</h4><p class="font-data-mono text-data-mono text-navy-muted">Actualizado: 2026 • 1.1k vistas</p><div class="flex items-center justify-between mt-1 text-data-mono text-navy-muted pt-1 border-t border-navy-border/60"><a class="truncate text-rose-400 flex items-center gap-1 hover:underline cursor-pointer" download="MANUAL_DOCUMENTO_SOPORTE.pdf" href="https://www.sotcarga.com/manuales/MANUAL%20DOCUMENTO%20SOPORTE.pdf" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>Manual Doc Soporte.pdf</a></div></div></div></div></div></div><div class="hidden p-space-xl text-center bg-navy-surface border border-navy-border rounded-xl" id="searchEmptyState"><div class="w-12 h-12 mx-auto rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center mb-space-sm"><span class="material-symbols-outlined text-[28px]">search_off</span></div><h4 class="font-headline-sm text-white font-bold mb-1">No se encontraron resultados</h4><p class="font-body-sm text-navy-muted mb-space-md">No hay videos o manuales que coincidan con el término buscado. Intenta con palabras clave como "RNDC", "remesa", "factura" o "fletes".</p><button class="px-space-md py-1.5 rounded-lg bg-[#1d4ed8] text-white font-label-md font-semibold hover:bg-[#1e40af] transition-colors" id="btnResetSearch" type="button">Ver todos los módulos</button></div></div></div>
+<!-- Document Manuals Fast Strip (Pure Document Downloads) -->
+<section class="bg-navy-surface border border-navy-border rounded-xl p-space-lg shadow-lg mb-space-xl" id="manuales-oficiales" style="scroll-margin-top: 130px;">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-400 text-[24px]">folder_special</span>
+<div>
+<span class="text-orange-400 font-label-sm uppercase tracking-wider font-semibold block">Repositorio Institucional</span>
+<h3 class="font-headline-md text-headline-md text-white font-bold">Manuales &amp; Fichas Técnicas Oficiales</h3>
+</div>
+</div>
+<a class="font-label-md text-label-md text-orange-400 hover:text-orange-300 flex items-center gap-1 transition-colors font-semibold" href="#">
+<span>Manuales</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-lg bg-navy-card border border-navy-border/80 flex items-center justify-between hover:border-orange-500/50 hover:bg-navy-card/90 transition-all shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="min-w-0">
+<a class="font-label-md text-label-md text-white truncate font-medium hover:underline block" download="MANUAL_DOCUMENTO_SOPORTE.pdf" href="https://www.sotcarga.com/manuales/MANUAL%20DOCUMENTO%20SOPORTE.pdf" rel="noopener noreferrer" target="_blank">Manual Doc Soporte.pdf</a>
+<p class="font-data-mono text-data-mono text-navy-muted">Guia oficial</p>
+</div>
+</div>
+<a class="p-2 text-navy-muted hover:text-orange-400 hover:bg-navy-surface rounded transition-colors flex items-center justify-center" download="MANUAL_DOCUMENTO_SOPORTE.pdf" href="https://www.sotcarga.com/manuales/MANUAL%20DOCUMENTO%20SOPORTE.pdf" rel="noopener noreferrer" target="_blank" title="Descargar Documento DIAN"><span class="material-symbols-outlined text-[20px]">download</span></a>
+</div>
+<div class="p-space-md rounded-lg bg-navy-card border border-navy-border/80 flex items-center justify-between hover:border-orange-500/50 hover:bg-navy-card/90 transition-all shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="min-w-0">
+<a class="font-label-md text-label-md text-white truncate font-medium hover:underline block" download="Manual_Nomina.pdf" href="https://www.sotcarga.com/manuales/PDF%20MANUAL%20DE%20NOMINA.pdf" rel="noopener noreferrer" target="_blank">Manual Nomina.pdf</a>
+<p class="font-data-mono text-data-mono text-navy-muted">4.5 MB • Guía Completa</p>
+</div>
+</div>
+<a class="p-2 text-navy-muted hover:text-orange-400 hover:bg-navy-surface rounded transition-colors flex items-center justify-center" download="Manual_Nomina.pdf" href="https://www.sotcarga.com/manuales/PDF%20MANUAL%20DE%20NOMINA.pdf" rel="noopener noreferrer" target="_blank" title="Descargar Documento"><span class="material-symbols-outlined text-[20px]">download</span></a>
+</div>
+<div class="p-space-md rounded-lg bg-navy-card border border-navy-border/80 flex items-center justify-between hover:border-orange-500/50 hover:bg-navy-card/90 transition-all shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-emerald-950/60 border border-emerald-800/50 text-emerald-400 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">table_view</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-white truncate font-medium">Plantilla_Liquidacion_Conductores.xlsx</p>
+<p class="font-data-mono text-data-mono text-navy-muted">850 KB • Excel con Fórmulas</p>
+</div>
+</div>
+<button class="p-2 text-navy-muted hover:text-orange-400 hover:bg-navy-surface rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
 </button>
 </div>
-<nav class="flex flex-col gap-1 text-sm font-medium">
-<a class="px-3 py-2 rounded bg-blue-600/30 text-white font-semibold flex items-center gap-2" href="#">
-<span class="material-symbols-outlined text-[18px]">home</span> Inicio
-        </a>
-<a class="px-3 py-2 rounded hover:bg-white/5 text-blue-200 hover:text-white flex items-center gap-2" href="#manuales-oficiales">
-<span class="material-symbols-outlined text-[18px]">download</span> Link de descarga
-        </a>
-<a class="px-3 py-2 rounded hover:bg-white/5 text-blue-200 hover:text-white flex items-center gap-2" href="#soluciones-empresariales">
-<span class="material-symbols-outlined text-[18px]">smartphone</span> App transporte
-        </a>
-<a class="px-3 py-2 rounded hover:bg-white/5 text-blue-200 hover:text-white flex items-center gap-2" href="#soluciones-empresariales">
-<span class="material-symbols-outlined text-[18px]">inventory_2</span> Empresas de paqueteo
-        </a>
-<a class="px-3 py-2 rounded hover:bg-white/5 text-blue-200 hover:text-white flex items-center gap-2" href="#soluciones-empresariales">
-<span class="material-symbols-outlined text-[18px]">terminal</span> Desarrollo a la medida
-        </a>
-<a class="px-3 py-2 rounded hover:bg-white/5 text-blue-200 hover:text-white flex items-center gap-2" href="#soluciones-empresariales">
-<span class="material-symbols-outlined text-[18px]">local_shipping</span> Transporte de carga
-        </a>
-<a class="px-3 py-2 rounded hover:bg-white/5 text-blue-200 hover:text-white flex items-center justify-between" href="#software-catalogo">
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">apps</span> Software de transporte</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</a>
-<a class="px-3 py-2 rounded hover:bg-white/5 text-blue-200 hover:text-white flex items-center justify-between" href="#software-catalogo">
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">folder_copy</span> Proyectos</span>
-<span class="material-symbols-outlined text-[16px]">chevron_right</span>
-</a>
-<a class="px-3 py-2 rounded hover:bg-white/5 text-blue-200 hover:text-white flex items-center gap-2" href="#video-hero">
-<span class="material-symbols-outlined text-[18px]">play_circle</span> Videos Tutoriales
-        </a>
-</nav>
-</div>
-<div class="pt-4 border-t border-blue-500/20 flex flex-col gap-2">
-<a class="w-full py-2.5 rounded-lg btn-sotcarga-orange text-center font-semibold text-white text-sm shadow" href="https://wa.me/573227145200">
-        Solicite una cotización
-      </a>
-<p class="text-[11px] text-center text-blue-300/60 font-mono">Sotcarga S.A.S 2001 - 2026</p>
-</div>
-</aside>
-<!-- 2. HERO SECTION / PORTADA (Disposición idéntica a la home original sotcarga.com a 2 columnas) -->
-<section class="relative bg-gradient-to-b from-[#021134] via-[#071633] to-[#021134] pt-8 md:pt-12 pb-16 overflow-hidden border-b border-blue-500/20">
-<div class="absolute inset-0 mosaic-pattern opacity-40 pointer-events-none"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-<!-- Columna Izquierda: Mensaje institucional idéntico a la home de sotcarga.com -->
-<div class="lg:col-span-6 flex flex-col gap-4 text-left">
-<!-- Subtítulo en Naranja Corporativo -->
-<div>
-<span class="text-brand-orange font-headline font-semibold text-xl sm:text-2xl lg:text-[26px] tracking-normal block leading-tight">
-              Registre su factura
-            </span>
-<span class="text-brand-orange font-headline font-semibold text-xl sm:text-2xl lg:text-[26px] tracking-normal block leading-tight mt-0.5">
-              electrónica al RNDC
-            </span>
-</div>
-<!-- Título Hero imponente en blanco -->
-<h1 class="font-headline font-bold text-white text-3xl sm:text-4xl lg:text-[46px] leading-[1.12] tracking-tight">
-            Un sistema para formalizar y controlar las empresas de transporte de carga
-          </h1>
-<!-- Párrafo descriptivo exacto de sotcarga.com -->
-<p class="text-blue-100/90 text-base sm:text-lg leading-relaxed font-normal">
-            Es un reto para los administradores definir los procesos y organizar la información de tal modo que se pueda cumplir con todos los requisitos de las entidades de control del Estado y de las certificadoras de calidad.
-          </p>
-<p class="text-blue-200/80 text-sm sm:text-base leading-relaxed hidden sm:block">
-            Utilice un sistema que organice los informes de forma eficiente a través de nuestras herramientas y con la confiabilidad de una interface ya probada con las entidades de control.
-          </p>
-<!-- Botones de Acción -->
-<div class="flex flex-wrap items-center gap-3 pt-2">
-<a class="px-6 py-3 rounded-lg btn-sotcarga-orange text-white font-headline font-semibold text-sm sm:text-base flex items-center gap-2 transition-all shadow-lg hover:shadow-orange-500/30" href="https://wa.me/573227145200" target="_blank">
-<span class="material-symbols-outlined text-[20px]">request_quote</span>
-<span>Solicite una cotización</span>
-</a>
-<a class="px-5 py-3 rounded-lg bg-[#0a1a3c] hover:bg-[#1a294b] text-white border border-blue-400/30 font-headline font-semibold text-sm sm:text-base flex items-center gap-2 transition-all" href="#video-hero">
-<span class="material-symbols-outlined text-blue-400 text-[20px]">play_circle</span>
-<span>Ver Demostración</span>
-</a>
-</div>
-<div class="pt-2 flex items-center gap-4 text-xs font-mono text-blue-300/80">
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-emerald-400 text-[16px]">verified</span>
-<span>RNDC Homologado</span>
-</div>
-<span>•</span>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-emerald-400 text-[16px]">verified</span>
-<span>DIAN Facturación</span>
-</div>
-<span>•</span>
-<div class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-emerald-400 text-[16px]">verified</span>
-<span>Resolución 20223040045515</span>
-</div>
-</div>
-</div>
-<!-- Columna Derecha: Contenedor Tecnológico / Video Tutorial Integrado como Mockup Hero -->
-<div class="lg:col-span-6" id="video-hero">
-<div class="relative rounded-2xl p-1 bg-gradient-to-b from-blue-400/40 via-blue-900/30 to-blue-500/10 device-glow">
-<div class="bg-[#071633] rounded-[14px] overflow-hidden border border-blue-400/30">
-<!-- Barra superior simulada de ventana operativa ERP Sísifo -->
-<div class="bg-[#0c1f48] px-4 py-2.5 border-b border-blue-400/20 flex items-center justify-between">
+<div class="p-space-md rounded-lg bg-navy-card border border-navy-border/80 flex items-center justify-between hover:border-orange-500/50 hover:bg-navy-card/90 transition-all shadow-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">picture_as_pdf</span></div><div class="min-w-0"><a class="font-label-md text-label-md text-white truncate font-medium hover:underline block" download="Manual_Doc_Soporte.pdf" href="http://www.sotcarga.com/Manuales/PDF%20Paso%20a%20paso%20Habilitacion%20DOC%20SOPORTE%20Dian.pdf" rel="noopener noreferrer" target="_blank">Habilitar_Doc_Soporte.pdf</a><p class="font-data-mono text-data-mono text-navy-muted">Paso a paso Habilitación DIAN</p></div></div><a class="p-2 text-navy-muted hover:text-orange-400 hover:bg-navy-surface rounded transition-colors flex items-center justify-center" download="Manual_Doc_Soporte.pdf" href="http://www.sotcarga.com/Manuales/PDF%20Paso%20a%20paso%20Habilitacion%20DOC%20SOPORTE%20Dian.pdf" rel="noopener noreferrer" target="_blank" title="Descargar Manual Doc Soporte"><span class="material-symbols-outlined text-[20px]">download</span></a></div><div class="p-space-md rounded-lg bg-navy-card border border-navy-border/80 flex items-center justify-between hover:border-orange-500/50 hover:bg-navy-card/90 transition-all shadow-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">picture_as_pdf</span></div><div class="min-w-0"><a class="font-label-md text-label-md text-white truncate font-medium hover:underline block" download="Manual_Sisifo.pdf" href="https://www.sotcarga.com/manuales/pdf%20manual%20sisifo.pdf" rel="noopener noreferrer" target="_blank">Manual_Sisifo.pdf</a><p class="font-data-mono text-data-mono text-navy-muted">3.2 MB • Guía Oficial Sísifo</p></div></div><a class="p-2 text-navy-muted hover:text-orange-400 hover:bg-navy-surface rounded transition-colors flex items-center justify-center" download="Manual_Sisifo.pdf" href="https://www.sotcarga.com/manuales/pdf%20manual%20sisifo.pdf" rel="noopener noreferrer" target="_blank" title="Descargar Manual General Sísifo"><span class="material-symbols-outlined text-[20px]">download</span></a></div><div class="p-space-md rounded-lg bg-navy-card border border-navy-border/80 flex items-center justify-between hover:border-orange-500/50 hover:bg-navy-card/90 transition-all shadow-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">picture_as_pdf</span></div><div class="min-w-0"><p class="font-label-md text-label-md text-white truncate font-medium">Resolución_000165_DIAN_2025.pdf</p><p class="font-data-mono text-data-mono text-navy-muted">1.8 MB • Anexo Técnico</p></div></div><button class="p-2 text-navy-muted hover:text-orange-400 hover:bg-navy-surface rounded transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">download</span></button></div></div>
+</section>
+<!-- Upload Modal / Drawer (Accessible via JS) -->
+<div class="fixed inset-0 z-50 bg-navy-bg/80 backdrop-blur-md flex items-center justify-center p-gutter hidden" id="uploadModal">
+<div class="w-full max-w-2xl bg-navy-surface border border-navy-border rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md sotcarga-header-gradient border-b border-navy-border flex items-center justify-between">
 <div class="flex items-center gap-2">
-<div class="flex gap-1.5">
-<span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-<span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-<span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-</div>
-<span class="text-xs font-mono text-blue-200/90 pl-2">SOTCARGA ERP SÍSIFO - MÓDULO OPERATIVO</span>
-</div>
-<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-blue-600/30 text-blue-200 border border-blue-400/30 font-semibold">TUTORIAL OFICIAL</span>
-</div>
-<!-- Media Player Stage -->
-<div class="relative aspect-video bg-black overflow-hidden flex items-center justify-center">
-<video class="w-full h-full object-cover" controls="" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuCXVtGX7FBUPABG-POs5qw3cUOUz6V43czraJTSXht7zOVnCqrb-JruwKgAFiB57e6w_r6Q-G9Goj6NqvCoNOA12ap9wHEK84O32RWS2Sdc_sQt8AOfpyOLGfyr88JBjsuqo2fOJHAWMZSaWNeEj4663qplER6n1GPm9nLWfrjITw77UcxFXQ3VDOkyon1i2ky6JYxgDuYh4mMDte9jV4GYqErgY_YOErj1CLh67c8-nBUj_uCItalq" preload="metadata">
-<source src="http://www.sotcarga.com/video/VIDEO%20ENTORNO%20SISIFO.mp4" type="video/mp4">
-                  Tu navegador no soporta la reproducción de video HTML5.
-                </video>
-</div>
-<!-- Ficha Informativa del Tutorial y Descarga de Manual -->
-<div class="p-4 sm:p-5 bg-[#0a1a3c] flex flex-col gap-3">
-<div class="flex items-start justify-between gap-3">
+<span class="material-symbols-outlined text-orange-400 text-[24px]">video_call</span>
 <div>
-<h2 class="text-white font-headline font-bold text-base sm:text-lg leading-snug">
-                      Entorno del Sistema Sísifo de Sotcarga SAS
-                    </h2>
-<p class="text-xs text-blue-200/70 font-mono mt-0.5">Soporte Técnico • Ministerio de Transporte / RNDC</p>
-</div>
-<span class="px-2 py-1 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 font-mono text-[11px] shrink-0 font-medium">
-                    2.8k vistas
-                  </span>
-</div>
-<!-- Caja de descarga del manual adjunto -->
-<div class="p-3 rounded-xl bg-[#000c2b]/70 border border-blue-500/20 flex items-center justify-between gap-3">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-9 h-9 rounded-lg bg-rose-950/80 border border-rose-700/60 text-rose-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
-</div>
-<div class="truncate">
-<p class="text-xs text-white font-medium truncate">Manual_Operativo_Sisifo.pdf</p>
-<p class="text-[10px] text-blue-200/60 font-mono">3.2 MB • Guía Oficial de Parámetros RNDC</p>
+<h3 class="font-headline-sm text-headline-sm text-white font-bold">Subir Video o Adjuntar Manual</h3>
+<p class="font-data-mono text-data-mono text-blue-200/80">ERP Sísifo • Base de Conocimiento Operativa</p>
 </div>
 </div>
-<a class="shrink-0 px-3 py-1.5 rounded-lg bg-[#1d6bf3] hover:bg-blue-600 text-white font-medium text-xs flex items-center gap-1.5 transition-all shadow" download="" href="https://www.sotcarga.com/manuales/MANUAL%20DOCUMENTO%20SOPORTE.pdf" target="_blank">
-<span class="material-symbols-outlined text-[15px]">download</span>
-<span>Descargar</span>
-</a>
+<button class="p-1.5 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-colors" onclick="closeUploadModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-lg flex flex-col gap-space-md bg-navy-surface">
+<!-- Metadata Inputs -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-orange-400 uppercase tracking-wider font-semibold">Título del Tutorial</label>
+<input class="px-space-md py-2 rounded-lg bg-navy-card border border-navy-border text-body-md font-body-md text-white placeholder:text-navy-muted focus:outline-none focus:border-orange-500 transition-colors" placeholder="Ej: Emisión de Manifiesto Express v8.4" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-orange-400 uppercase tracking-wider font-semibold">Módulo ERP Asociado</label>
+<select class="px-space-md py-2 rounded-lg bg-navy-card border border-navy-border text-body-md font-body-md text-white focus:outline-none focus:border-orange-500 transition-colors cursor-pointer">
+<option>Despachos &amp; RNDC</option>
+<option>Facturación DIAN</option>
+<option>Liquidaciones de Viaje</option>
+<option>Tablas Básicas &amp; RUNT</option>
+<option>Monitoreo Satelital</option>
+</select>
 </div>
 </div>
+<!-- Dual Drag & Drop Zones -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Video File Dropzone -->
+<div class="p-space-lg rounded-xl bg-navy-card border border-dashed border-navy-border hover:border-orange-500/80 transition-colors flex flex-col items-center justify-center text-center cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-orange-500/20 border border-orange-500/40 group-hover:bg-orange-500/30 text-orange-400 flex items-center justify-center mb-space-sm transition-colors">
+<span class="material-symbols-outlined text-[28px]">movie</span>
+</div>
+<span class="font-label-md text-label-md text-navy-text font-semibold">Arrastrar Video Tutorial</span>
+<span class="font-data-mono text-data-mono text-navy-muted mt-0.5">MP4, MOV o WebM (Máx. 2 GB)</span>
+<button class="mt-space-md px-space-md py-1.5 rounded-lg bg-navy-surface border border-navy-border text-navy-text font-label-sm text-label-sm shadow-sm hover:border-orange-500 hover:text-orange-400 transition-colors" type="button">
+              Examinar archivo
+            </button>
+</div>
+<!-- Document PDF Dropzone -->
+<div class="p-space-lg rounded-xl bg-navy-card border border-dashed border-navy-border hover:border-rose-500/80 transition-colors flex flex-col items-center justify-center text-center cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-rose-950/80 border border-rose-800/60 group-hover:bg-rose-900 text-rose-400 flex items-center justify-center mb-space-sm transition-colors">
+<span class="material-symbols-outlined text-[28px]">picture_as_pdf</span>
+</div>
+<span class="font-label-md text-label-md text-navy-text font-semibold">Adjuntar Manual PDF</span>
+<span class="font-data-mono text-data-mono text-navy-muted mt-0.5">PDF, DOCX o XLSX (Máx. 50 MB)</span>
+<button class="mt-space-md px-space-md py-1.5 rounded-lg bg-navy-surface border border-navy-border text-navy-text font-label-sm text-label-sm shadow-sm hover:border-rose-500 hover:text-rose-400 transition-colors" type="button">
+              Examinar documento
+            </button>
 </div>
 </div>
+<!-- Optional Version & Tags -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-navy-muted">Versión Software</label>
+<input class="px-space-md py-1.5 rounded-lg bg-navy-card border border-navy-border text-body-sm font-body-sm text-white placeholder:text-navy-muted focus:outline-none focus:border-orange-500 transition-colors" placeholder="Ej: v8.4.2" type="text">
 </div>
-</div>
-</div>
-</section>
-<!-- 3. PILARES DE NEGOCIO / TARGET AUDIENCES (Tal como aparece inmediatamente después en sotcarga.com) -->
-<section class="py-14 bg-[#0a1a3c]/60 border-b border-blue-500/20" id="soluciones-empresariales">
-<div class="max-w-7xl mx-auto px-4 sm:px-6">
-<div class="text-center max-w-3xl mx-auto mb-10">
-<span class="text-brand-orange font-mono text-xs font-semibold uppercase tracking-wider block mb-1">
-          Especialización Sectorial
-        </span>
-<h2 class="text-white font-headline font-bold text-2xl sm:text-3xl">
-          Soluciones Diseñadas para Cada Modelo de Transporte
-        </h2>
-<p class="text-blue-200/80 text-sm mt-2">
-          Organice sus procesos con herramientas probadas que garantizan el cumplimiento regulatorio de su empresa ante las entidades de control.
-        </p>
-</div>
-<!-- Grid con las 5 tarjetas de audiencia según sotcarga.com -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-<!-- Tarjeta 1: Seguimiento en toda la cadena logística -->
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all shadow-lg flex flex-col justify-between group">
-<div>
-<div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[26px]">cloud_sync</span>
-</div>
-<h3 class="text-white font-headline font-semibold text-lg mb-2">
-              Seguimiento de envíos en toda la cadena logística
-            </h3>
-<p class="text-blue-200/80 text-xs sm:text-sm leading-relaxed">
-              Aplicativos en la nube y apps en dispositivos móviles que conectan a remitentes, conductores y destinatarios con reportes de novedades e inventario en tiempo real.
-            </p>
-</div>
-<span class="text-brand-orange text-xs font-mono font-medium mt-4 flex items-center gap-1">
-<span>Sistemas en la nube &amp; App</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</span>
-</div>
-<!-- Tarjeta 2: Empresa de Transporte con vehículos propios -->
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all shadow-lg flex flex-col justify-between group">
-<div>
-<div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[26px]">local_shipping</span>
-</div>
-<h3 class="text-white font-headline font-semibold text-lg mb-2">
-              Empresa Transporte con vehículos propios
-            </h3>
-<p class="text-blue-200/80 text-xs sm:text-sm leading-relaxed">
-              Software gerencial, administrativo y de control integral de combustible, llantas, hojas de vida automotrices y mantenimiento preventivo.
-            </p>
-</div>
-<span class="text-brand-orange text-xs font-mono font-medium mt-4 flex items-center gap-1">
-<span>Control de flota propia</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</span>
-</div>
-<!-- Tarjeta 3: Empresa de carga masiva con terceros -->
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all shadow-lg flex flex-col justify-between group">
-<div>
-<div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[26px]">share</span>
-</div>
-<h3 class="text-white font-headline font-semibold text-lg mb-2">
-              Empresa de carga masiva con terceros
-            </h3>
-<p class="text-blue-200/80 text-xs sm:text-sm leading-relaxed">
-              Herramientas de alto desempeño para reportar de manera oportuna a los entes de control (RNDC / DIAN), liquidar fletes, anticipos y cumplidos de tenedores.
-            </p>
-</div>
-<span class="text-brand-orange text-xs font-mono font-medium mt-4 flex items-center gap-1">
-<span>Validación RNDC &amp; DIAN</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</span>
-</div>
-<!-- Tarjeta 4: Empresa de Paqueteo -->
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all shadow-lg flex flex-col justify-between group">
-<div>
-<div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[26px]">inventory_2</span>
-</div>
-<h3 class="text-white font-headline font-semibold text-lg mb-2">
-              Empresa de Paqueteo
-            </h3>
-<p class="text-blue-200/80 text-xs sm:text-sm leading-relaxed">
-              Sistemas ágiles para procesar grandes cantidades de envíos y paquetes en bloque con lector de código de barras, zonificación y liquidación por clientes.
-            </p>
-</div>
-<span class="text-brand-orange text-xs font-mono font-medium mt-4 flex items-center gap-1">
-<span>Alto volumen de guías</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</span>
-</div>
-<!-- Tarjeta 5: Empresa de transporte con necesidades especiales (span 2 cols) -->
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all shadow-lg flex flex-col justify-between group md:col-span-2 lg:col-span-2">
-<div>
-<div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-400/30 text-blue-300 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-[26px]">terminal</span>
-</div>
-<h3 class="text-white font-headline font-semibold text-lg mb-2">
-              Empresa de transporte con necesidades especiales
-            </h3>
-<p class="text-blue-200/80 text-xs sm:text-sm leading-relaxed">
-              Encontramos una solución a sus requerimientos particulares mediante desarrollo de software a la medida: “Un software que se adapta a su empresa, no su empresa al software”. Integración con SAP, Oracle, ERPs corporativos y portales satelitales.
-            </p>
-</div>
-<span class="text-brand-orange text-xs font-mono font-medium mt-4 flex items-center gap-1">
-<span>Desarrollo personalizado &amp; API</span>
-<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</span>
+<div class="md:col-span-2 flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-navy-muted">Etiquetas Clave</label>
+<input class="px-space-md py-1.5 rounded-lg bg-navy-card border border-navy-border text-body-sm font-body-sm text-white placeholder:text-navy-muted focus:outline-none focus:border-orange-500 transition-colors" placeholder="Separadas por comas (RNDC, CUFE, Manifiesto)" type="text">
 </div>
 </div>
 </div>
-</section>
-<!-- 4. SECCIÓN REGULATORIA Y FACTURACIÓN ELECTRÓNICA RNDC -->
-<section class="py-16 bg-[#021134] border-b border-blue-500/20" id="facturacion-rndc">
-<div class="max-w-7xl mx-auto px-4 sm:px-6">
-<!-- Encabezado de Sección -->
-<div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-blue-500/20 mb-8">
+<!-- Modal Footer -->
+<div class="px-space-lg py-space-md bg-navy-card border-t border-navy-border flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-navy-surface border border-navy-border text-navy-muted hover:text-white font-label-md text-label-md transition-colors" onclick="closeUploadModal()" type="button">
+          Cancelar
+        </button>
+<button class="px-space-xl py-2 rounded-lg bg-[#1d4ed8] hover:bg-[#1e40af] border border-blue-400/50 text-white font-label-md text-label-md shadow-lg transition-all flex items-center gap-2 font-semibold" onclick="closeUploadModal()" type="button"><span class="material-symbols-outlined text-[18px]">publish</span><span>Publicar en Academia</span></button>
+</div>
+</div>
+</div>
+<!-- Footer de Soporte & WhatsApp Sotcarga SAS -->
+<footer class="mt-space-xl pt-space-lg pb-space-xl border-t border-navy-border text-navy-muted flex flex-col md:flex-row items-center justify-between gap-4">
 <div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[24px]">receipt_long</span>
-</div>
-<div>
-<span class="text-emerald-400 font-mono text-xs uppercase tracking-wider font-semibold block">
-              Resolución 20223040045515 de 2022 • Mintransporte
-            </span>
-<h2 class="text-white font-headline font-bold text-xl sm:text-2xl">
-              Factura Electrónica y Envío XML RNDC
-            </h2>
-</div>
-</div>
-<span class="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 font-mono text-xs font-semibold">
-          Homologado DIAN &amp; Ministerio de Transporte
-        </span>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-<!-- Beneficios Clave -->
-<div class="lg:col-span-7 flex flex-col gap-4">
-<h3 class="text-white font-headline font-bold text-xl sm:text-2xl leading-snug">
-            Emita y transmita sus facturas ligadas al manifiesto RNDC en menos de 72 horas
-          </h3>
-<p class="text-blue-200/80 text-sm sm:text-base leading-relaxed">
-            El sistema ERP Sísifo automatiza la generación del archivo XML normativo con los campos de fletes, retenciones ICA, fuente y estampillas, transmitiendo sin reprocesos al servidor del RNDC para evitar las sanciones de la Superintendencia de Transporte.
-          </p>
-<!-- Grid de Viñetas Clave -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-<div class="flex items-start gap-2.5 p-3 rounded-xl bg-[#0a1a3c] border border-blue-500/20">
-<span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0 mt-0.5">check_circle</span>
-<span class="text-xs text-blue-100 font-medium">Evite sanciones con 1 clic mediante validación previa</span>
-</div>
-<div class="flex items-start gap-2.5 p-3 rounded-xl bg-[#0a1a3c] border border-blue-500/20">
-<span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0 mt-0.5">check_circle</span>
-<span class="text-xs text-blue-100 font-medium">Cumplimiento ante RNDC en &lt; 72 horas automáticas</span>
-</div>
-<div class="flex items-start gap-2.5 p-3 rounded-xl bg-[#0a1a3c] border border-blue-500/20">
-<span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0 mt-0.5">check_circle</span>
-<span class="text-xs text-blue-100 font-medium">Elabore SIPLAFT y auditoría contra listas restrictivas</span>
-</div>
-<div class="flex items-start gap-2.5 p-3 rounded-xl bg-[#0a1a3c] border border-blue-500/20">
-<span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0 mt-0.5">check_circle</span>
-<span class="text-xs text-blue-100 font-medium">Control en tiempo real de anticipos y saldos de viaje</span>
-</div>
-<div class="flex items-start gap-2.5 p-3 rounded-xl bg-[#0a1a3c] border border-blue-500/20">
-<span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0 mt-0.5">check_circle</span>
-<span class="text-xs text-blue-100 font-medium">Causación contable y nómina de conductores rápida</span>
-</div>
-<div class="flex items-start gap-2.5 p-3 rounded-xl bg-[#0a1a3c] border border-blue-500/20">
-<span class="material-symbols-outlined text-emerald-400 text-[20px] shrink-0 mt-0.5">check_circle</span>
-<span class="text-xs text-blue-100 font-medium">Asociación del CUFE y radicado de manifiesto directo</span>
-</div>
-</div>
-<div class="pt-2 flex items-center gap-3">
-<a class="px-5 py-2.5 rounded-lg btn-sotcarga-orange text-white font-semibold text-xs sm:text-sm flex items-center gap-2" href="https://wa.me/573227145200" target="_blank">
-<span class="material-symbols-outlined text-[18px]">support_agent</span>
-<span>Asesoría de Habilitación RNDC</span>
-</a>
-</div>
-</div>
-<!-- Visor / Diagrama XML RNDC -->
-<div class="lg:col-span-5">
-<div class="rounded-2xl bg-[#0a1a3c] border border-blue-400/30 p-5 shadow-xl flex flex-col gap-4">
-<div class="flex items-center justify-between border-b border-blue-500/20 pb-3">
-<div class="flex items-center gap-2">
-<span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-<span class="font-mono text-xs text-blue-200 font-semibold">FLUJO DE EMISIÓN ELECTRÓNICA</span>
-</div>
-<span class="font-mono text-[11px] text-emerald-400 font-medium">ESTADO: SINCRONIZADO</span>
-</div>
-<!-- Pasos del flujo -->
-<div class="grid grid-cols-3 gap-2 text-center font-mono text-xs">
-<div class="p-2.5 rounded-xl bg-[#000c2b] border border-blue-500/20">
-<span class="text-brand-orange font-bold block text-[11px]">Paso 1</span>
-<span class="text-white text-[11px]">Manifiesto</span>
-</div>
-<div class="p-2.5 rounded-xl bg-[#000c2b] border border-blue-500/20">
-<span class="text-blue-400 font-bold block text-[11px]">Paso 2</span>
-<span class="text-white text-[11px]">Factura DIAN</span>
-</div>
-<div class="p-2.5 rounded-xl bg-[#000c2b] border border-blue-500/20">
-<span class="text-emerald-400 font-bold block text-[11px]">Paso 3</span>
-<span class="text-white text-[11px]">Envío RNDC</span>
-</div>
-</div>
-<!-- Código XML de muestra -->
-<div class="p-3.5 rounded-xl bg-[#000c2b] border border-blue-500/30 font-mono text-[11px] text-blue-200/90 leading-relaxed overflow-x-auto">
-<span class="text-blue-400">&lt;RNDC:FacturaElectronica&gt;</span><br>
-              &nbsp;&nbsp;<span class="text-white">&lt;NumManifiesto&gt;</span>2026-MAN-010482<span class="text-white">&lt;/NumManifiesto&gt;</span><br>
-              &nbsp;&nbsp;<span class="text-white">&lt;CUFE&gt;</span>fe809a72b83c11ec8d8...99bc<span class="text-white">&lt;/CUFE&gt;</span><br>
-              &nbsp;&nbsp;<span class="text-white">&lt;ValorFlete moneda="COP"&gt;</span>$5,420,000<span class="text-white">&lt;/ValorFlete&gt;</span><br>
-              &nbsp;&nbsp;<span class="text-white">&lt;RetencionFuente&gt;</span>$54,200<span class="text-white">&lt;/RetencionFuente&gt;</span><br>
-              &nbsp;&nbsp;<span class="text-emerald-400">&lt;EstadoTransmision&gt;EXITOSA_HOMOLOGADO&lt;/EstadoTransmision&gt;</span><br>
-<span class="text-blue-400">&lt;/RNDC:FacturaElectronica&gt;</span>
-</div>
-<div class="flex items-center justify-between text-[11px] font-mono text-blue-300/80 pt-1">
-<span>Resolución Mintransporte Vigente</span>
-<span class="text-emerald-400 font-semibold">100% Cero Errores</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 5. PRODUCTOS Y SOFTWARE OPERATIVO SÍSIFO (Catálogo de Soluciones) -->
-<section class="py-16 bg-[#0a1a3c]/40 border-b border-blue-500/20" id="software-catalogo">
-<div class="max-w-7xl mx-auto px-4 sm:px-6">
-<div class="flex flex-wrap items-end justify-between gap-4 mb-10">
-<div>
-<span class="text-brand-orange font-mono text-xs font-semibold uppercase tracking-wider block mb-1">
-            Software confiable y fácil de usar
-          </span>
-<h2 class="text-white font-headline font-bold text-2xl sm:text-3xl">
-            Ofrecemos una amplia gama de productos para empresas de transporte
-          </h2>
-</div>
-<a class="text-blue-300 hover:text-white font-headline font-semibold text-sm flex items-center gap-1 transition-colors" href="https://wa.me/573227145200" target="_blank">
-<span>Solicitar demo guiada de módulos</span>
-<span class="material-symbols-outlined text-[18px]">chevron_right</span>
-</a>
-</div>
-<!-- Tarjetas de Productos -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all flex flex-col justify-between">
-<div>
-<div class="w-10 h-10 rounded-lg bg-orange-500/10 border border-orange-500/30 text-brand-orange flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-[22px]">local_shipping</span>
-</div>
-<h4 class="text-white font-headline font-semibold text-base mb-1.5">Software Operativo</h4>
-<p class="text-blue-200/70 text-xs leading-relaxed">Emisión de remesas, manifiestos RNDC en línea, órdenes de cargue y control de viajes.</p>
-</div>
-<span class="mt-4 text-[10px] font-mono text-brand-orange font-semibold">MÓDULO CENTRAL</span>
-</div>
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all flex flex-col justify-between">
-<div>
-<div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-400/30 text-blue-300 flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-[22px]">account_balance</span>
-</div>
-<h4 class="text-white font-headline font-semibold text-base mb-1.5">Contabilidad Integrada</h4>
-<p class="text-blue-200/70 text-xs leading-relaxed">Causación automática de fletes, retenciones, cuentas por pagar a tenedores bajo NIIF.</p>
-</div>
-<span class="mt-4 text-[10px] font-mono text-blue-300 font-semibold">SÍSIFO CONTABLE</span>
-</div>
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all flex flex-col justify-between">
-<div>
-<div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-[22px]">radar</span>
-</div>
-<h4 class="text-white font-headline font-semibold text-base mb-1.5">Rastreo de Guías</h4>
-<p class="text-blue-200/70 text-xs leading-relaxed">Portal web cliente para consulta en tiempo real, estados de entrega y firmas digitales.</p>
-</div>
-<span class="mt-4 text-[10px] font-mono text-emerald-400 font-semibold">PORTAL TRACKING</span>
-</div>
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all flex flex-col justify-between">
-<div>
-<div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 text-purple-300 flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-[22px]">smartphone</span>
-</div>
-<h4 class="text-white font-headline font-semibold text-base mb-1.5">Aplicaciones Móviles</h4>
-<p class="text-blue-200/70 text-xs leading-relaxed">App conductor para novedades viales, anticipos de combustible y captura de cumplidos.</p>
-</div>
-<span class="mt-4 text-[10px] font-mono text-purple-300 font-semibold">ANDROID &amp; IOS</span>
-</div>
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all flex flex-col justify-between">
-<div>
-<div class="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-[22px]">receipt</span>
-</div>
-<h4 class="text-white font-headline font-semibold text-base mb-1.5">Facturación &amp; RNDC</h4>
-<p class="text-blue-200/70 text-xs leading-relaxed">Generación de XML validado ante DIAN y envío automático al web service del RNDC.</p>
-</div>
-<span class="mt-4 text-[10px] font-mono text-rose-400 font-semibold">HOMOLOGADO</span>
-</div>
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all flex flex-col justify-between">
-<div>
-<div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-[22px]">route</span>
-</div>
-<h4 class="text-white font-headline font-semibold text-base mb-1.5">Sistemas Seguimiento</h4>
-<p class="text-blue-200/70 text-xs leading-relaxed">Control de puestos de control, tiempos de recorrido, alarmas satelitales y geocercas.</p>
-</div>
-<span class="mt-4 text-[10px] font-mono text-amber-400 font-semibold">TRAZABILIDAD</span>
-</div>
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all flex flex-col justify-between">
-<div>
-<div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-[22px]">dynamic_feed</span>
-</div>
-<h4 class="text-white font-headline font-semibold text-base mb-1.5">Proceso por Lotes</h4>
-<p class="text-blue-200/70 text-xs leading-relaxed">Cargue masivo de paquetes desde Excel o WS para miles de despachos simultáneos.</p>
-</div>
-<span class="mt-4 text-[10px] font-mono text-cyan-400 font-semibold">PAQUETEO RÁPIDO</span>
-</div>
-<div class="p-5 rounded-2xl bg-[#0e224b]/70 border border-blue-500/20 hover:border-brand-orange/60 transition-all flex flex-col justify-between">
-<div>
-<div class="w-10 h-10 rounded-lg bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center mb-3">
-<span class="material-symbols-outlined text-[22px]">build</span>
-</div>
-<h4 class="text-white font-headline font-semibold text-base mb-1.5">Mantenimiento Flota</h4>
-<p class="text-blue-200/70 text-xs leading-relaxed">Órdenes de taller, consumo de ACPM, inventario de repuestos y control de llantas.</p>
-</div>
-<span class="mt-4 text-[10px] font-mono text-teal-400 font-semibold">FLOTA PROPIA</span>
-</div>
-</div>
-<!-- Repositorio de Manuales Técnicos PDF Oficiales -->
-<div class="mt-12 p-6 rounded-2xl bg-[#000c2b] border border-blue-500/20" id="manuales-oficiales">
-<div class="flex flex-wrap items-center justify-between gap-3 mb-6">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-brand-orange text-[24px]">folder_special</span>
-<div>
-<h3 class="text-white font-headline font-bold text-lg">Repositorio Institucional de Manuales y Fichas Técnicas</h3>
-<p class="text-xs text-blue-200/60 font-mono">Documentación oficial para clientes y habilitación RNDC / DIAN</p>
-</div>
-</div>
-<span class="text-xs font-mono text-blue-300">Descarga directa oficial</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<a class="p-4 rounded-xl bg-[#0a1a3c] border border-blue-500/20 hover:border-brand-orange/60 transition-all flex items-center justify-between group" download="" href="https://www.sotcarga.com/manuales/MANUAL%20DOCUMENTO%20SOPORTE.pdf" target="_blank">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-9 h-9 rounded-lg bg-rose-950/80 border border-rose-700/60 text-rose-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
-</div>
-<div class="truncate">
-<p class="text-xs text-white font-medium truncate group-hover:text-brand-orange transition-colors">Manual Documento Soporte.pdf</p>
-<p class="text-[10px] text-blue-200/60 font-mono">1.8 MB • DIAN Técnico</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-blue-300 group-hover:text-white text-[18px]">download</span>
-</a>
-<a class="p-4 rounded-xl bg-[#0a1a3c] border border-blue-500/20 hover:border-brand-orange/60 transition-all flex items-center justify-between group" download="" href="https://www.sotcarga.com/manuales/PDF%20MANUAL%20DE%20NOMINA.pdf" target="_blank">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-9 h-9 rounded-lg bg-rose-950/80 border border-rose-700/60 text-rose-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
-</div>
-<div class="truncate">
-<p class="text-xs text-white font-medium truncate group-hover:text-brand-orange transition-colors">Manual de Nómina Sísifo.pdf</p>
-<p class="text-[10px] text-blue-200/60 font-mono">4.5 MB • Guía Completa</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-blue-300 group-hover:text-white text-[18px]">download</span>
-</a>
-<a class="p-4 rounded-xl bg-[#0a1a3c] border border-blue-500/20 hover:border-brand-orange/60 transition-all flex items-center justify-between group" download="" href="http://www.sotcarga.com/Manuales/PDF%20Paso%20a%20paso%20Habilitacion%20DOC%20SOPORTE%20Dian.pdf" target="_blank">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-9 h-9 rounded-lg bg-rose-950/80 border border-rose-700/60 text-rose-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
-</div>
-<div class="truncate">
-<p class="text-xs text-white font-medium truncate group-hover:text-brand-orange transition-colors">Paso a Paso Habilitación DIAN.pdf</p>
-<p class="text-[10px] text-blue-200/60 font-mono">2.1 MB • Instructivo</p>
-</div>
-</div>
-<span class="material-symbols-outlined text-blue-300 group-hover:text-white text-[18px]">download</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- 6. SECCIÓN "SÍSIFO ERP" Y CASOS DE ÉXITO (+20 años de experiencia) -->
-<section class="py-14 bg-gradient-to-r from-blue-900/30 via-[#0a1a3c] to-blue-900/30 border-b border-blue-500/20">
-<div class="max-w-7xl mx-auto px-4 sm:px-6">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-10 pb-8 border-b border-blue-500/20">
-<div>
-<span class="font-headline font-bold text-3xl sm:text-4xl text-white block">+20 Años</span>
-<span class="text-xs text-blue-200/70 font-mono">Experiencia comprobada en transporte</span>
-</div>
-<div>
-<span class="font-headline font-bold text-3xl sm:text-4xl text-emerald-400 block">100% Digital</span>
-<span class="text-xs text-blue-200/70 font-mono">Gestión documental y cero papel</span>
-</div>
-<div>
-<span class="font-headline font-bold text-3xl sm:text-4xl text-brand-orange block">Automática</span>
-<span class="text-xs text-blue-200/70 font-mono">Causación contable y fletes RNDC</span>
-</div>
-<div>
-<span class="font-headline font-bold text-3xl sm:text-4xl text-blue-300 block">Oficial</span>
-<span class="text-xs text-blue-200/70 font-mono">Homologación DIAN &amp; Mintransporte</span>
-</div>
-</div>
-<!-- Banner de reserva de demostración -->
-<div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-orange-500/20 via-[#0a1a3c] to-blue-600/20 border border-brand-orange/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
-<div class="flex items-center gap-4 text-left">
-<div class="w-14 h-14 rounded-2xl bg-brand-orange/20 border border-brand-orange/40 text-brand-orange flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[32px]">headset_mic</span>
-</div>
-<div>
-<h3 class="text-white font-headline font-bold text-xl sm:text-2xl">
-              Reserva una Demostración Gratuita
-            </h3>
-<p class="text-blue-100/80 text-xs sm:text-sm mt-0.5 max-w-xl">
-              Conozca cómo el ERP Sísifo transforma la rentabilidad, la eficiencia operativa y el blindaje normativo de su empresa de carga.
-            </p>
-</div>
-</div>
-<div class="flex flex-wrap items-center gap-3 shrink-0">
-<a class="px-6 py-3 rounded-lg btn-sotcarga-orange text-white font-headline font-semibold text-sm flex items-center gap-2 shadow-lg" href="https://wa.me/573227145200" target="_blank">
-<span class="material-symbols-outlined text-[18px]">event_available</span>
-<span>Agendar Demostración</span>
-</a>
-<a class="px-5 py-3 rounded-lg bg-[#000c2b] border border-white/20 text-white font-headline font-semibold text-sm hover:border-blue-400 transition-all flex items-center gap-2" href="tel:+576017458900">
-<span class="material-symbols-outlined text-[18px]">call</span>
-<span>PBX (601) 745-8900</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- 7. FOOTER CORPORATIVO (Exacto al estilo y pie de página de Sotcarga SAS 2001-2026) -->
-<footer class="bg-[#000c2b] pt-12 pb-14 text-blue-200/80 text-xs border-t border-blue-500/20" id="contacto-footer">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-8">
-<!-- Fila Superior Footer: Identidad y Contacto -->
-<div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-blue-500/20">
-<div class="flex items-center gap-3.5">
-<div class="w-11 h-11 rounded-full overflow-hidden flex items-center justify-center shrink-0 bg-transparent">
-<img alt="Sotcarga SAS" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwVtfnbaH_pBeNRTg9Ke1bLbQ6CtKFHMSIqKSrVxEgw8YYLkACJSrDnLrCpjzWXAq5pM2BcE2bznVE7mqCCoCnFHO_ocqT3Om93NWN9kekSCIbEaV6dvMdXAX9ylQGIWYYc4xtmrfzKA7NcpWcqDC43KngDNqsxDkhVzS4qKGHmxqOnR2ECvVQ9AnAyRBzz-S_XYw5bCovRf6AQhtHNcT4GVD6M-h_sRqPGTbd2EY" style="mix-blend-mode: screen;">
-</div>
-<div>
-<div class="text-sm text-white font-headline font-bold uppercase tracking-tight">
-              Sotcarga S.A.S. © 2001 - 2026 • Bogotá D.C., Colombia
-            </div>
-<div class="text-[11px] font-mono text-blue-300/70">
-              NIT: 830.089.441-2 • Sistema de Transporte &amp; Logística ERP Sísifo
-            </div>
-</div>
-</div>
-<div class="flex flex-wrap items-center justify-center gap-4 font-mono text-xs">
-<a class="flex items-center gap-1.5 text-blue-200 hover:text-white transition-colors" href="tel:+576017458900">
-<span class="material-symbols-outlined text-[16px] text-blue-300">call</span>
-<span>PBX +57 (601) 745-8900</span>
-</a>
-<span class="text-blue-500/30">|</span>
-<a class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 hover:text-emerald-300 transition-colors" href="https://wa.me/573227145200" target="_blank">
+<div class="w-9 h-9 flex items-center justify-center shrink-0" style="border-radius: 9999px; overflow: hidden; clip-path: circle(50%); background: transparent;"><img alt="SOTCARGA SAS Logo" class="w-full h-full object-contain block animated-sotcarga-logo drop-shadow-sm" src="https://www.sotcarga.com/images/sotcarga.gif" style="border-radius: 9999px; clip-path: circle(50%); mix-blend-mode: screen; background: transparent; object-fit: cover;"></div>
+<div class="text-sm">
+<span class="text-white font-bold tracking-tight">SOTCARGA S.A.S.</span> — Sistema de Transporte &amp; Logística ERP Sísifo © 2026
+    </div>
+</div>
+<div class="flex items-center gap-4 text-xs font-data-mono">
+<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-700/60 text-emerald-400 hover:text-emerald-300 transition-colors" href="https://wa.me/573227145200" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[16px]">chat</span>
-<span>WS: +(57) 322 714 5200</span>
+<span>WhatsApp Soporte: +(57) 322 714 5200</span>
 </a>
-<span class="text-blue-500/30">|</span>
-<a class="flex items-center gap-1.5 text-blue-200 hover:text-white transition-colors" href="mailto:soporte@sotcarga.com">
-<span class="material-symbols-outlined text-[16px] text-blue-300">mail</span>
-<span>soporte@sotcarga.com</span>
-</a>
-</div>
-</div>
-<!-- Fila Inferior: Enlaces Institucionales y Homologación -->
-<div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-<div class="flex flex-wrap items-center justify-center gap-5">
-<a class="hover:text-white transition-colors" href="#">Inicio</a>
-<a class="hover:text-white transition-colors" href="#soluciones-empresariales">Quiénes somos</a>
-<a class="hover:text-white transition-colors" href="#contacto-footer">Contáctenos</a>
-<a class="hover:text-white transition-colors" href="#manuales-oficiales">Link de descarga</a>
-<a class="hover:text-white transition-colors" href="#facturacion-rndc">Normatividad RNDC</a>
-<a class="hover:text-white transition-colors" href="#">Términos y Condiciones</a>
-</div>
-<div class="flex items-center gap-2 font-mono text-[11px] text-blue-100">
-<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-<span>DIAN &amp; Ministerio de Transporte Homologado Oficialmente</span>
-</div>
-</div>
-<!-- Barra de Mosaico inferior fiel al pie de página de sotcarga.com -->
-<div class="w-full pt-4 flex flex-col items-center justify-center text-center">
-<p class="text-[11px] text-blue-300/50 font-mono tracking-wider">
-          Sotcarga SAS 2001 - 2026 • Bogotá D.C. Colombia • Cra. 68D # 13-41
-        </p>
-</div>
+<span class="text-navy-border hidden sm:inline">|</span>
+<span class="text-navy-muted hidden sm:inline">RNDC &amp; DIAN Homologado</span>
 </div>
 </footer>
-<!-- Modal / Drawer Script Logic -->
+<!-- Interactive JavaScript for Chips & Modal -->
 <script>
-    const btnMobileToggle = document.getElementById('btnMobileToggle');
-    const btnCloseMobileDrawer = document.getElementById('btnCloseMobileDrawer');
-    const mobileDrawer = document.getElementById('mobileDrawer');
-    const mobileDrawerBackdrop = document.getElementById('mobileDrawerBackdrop');
-
-    function openMobileMenu() {
-      if (!mobileDrawer || !mobileDrawerBackdrop) return;
-      mobileDrawer.classList.remove('-translate-x-full');
-      mobileDrawerBackdrop.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    }
-
-    function closeMobileMenu() {
-      if (!mobileDrawer || !mobileDrawerBackdrop) return;
-      mobileDrawer.classList.add('-translate-x-full');
-      mobileDrawerBackdrop.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }
-
-    if (btnMobileToggle) btnMobileToggle.addEventListener('click', openMobileMenu);
-    if (btnCloseMobileDrawer) btnCloseMobileDrawer.addEventListener('click', closeMobileMenu);
-    if (mobileDrawerBackdrop) mobileDrawerBackdrop.addEventListener('click', closeMobileMenu);
-
-    // Búsqueda rápida con Ctrl+K
-    window.addEventListener('keydown', (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
-        e.preventDefault();
-        const searchInput = document.getElementById('quickSearchInput');
-        if (searchInput) {
-          searchInput.focus();
-          searchInput.select();
-        }
+    function openUploadModal() {
+      const modal = document.getElementById('uploadModal');
+      if (modal) {
+        modal.classList.remove('hidden');
       }
+    }
+
+    function closeUploadModal() {
+      const modal = document.getElementById('uploadModal');
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Responsive Mobile Sidebar Drawer Logic
+    const btnMobileMenu = document.getElementById('btnMobileMenu');
+    const btnCloseSidebar = document.getElementById('btnCloseSidebar');
+    const sidebarDrawer = document.getElementById('sidebarDrawer');
+    const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+    function openSidebar() {
+      if (!sidebarDrawer) return;
+      sidebarDrawer.classList.remove('-translate-x-full');
+      if (sidebarBackdrop) sidebarBackdrop.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden', 'lg:overflow-auto');
+    }
+
+    function closeSidebar() {
+      if (!sidebarDrawer) return;
+      sidebarDrawer.classList.add('-translate-x-full');
+      if (sidebarBackdrop) sidebarBackdrop.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden', 'lg:overflow-auto');
+    }
+
+    function toggleSidebar() {
+      if (!sidebarDrawer) return;
+      const isClosed = sidebarDrawer.classList.contains('-translate-x-full');
+      if (isClosed) {
+        openSidebar();
+      } else {
+        closeSidebar();
+      }
+    }
+
+    if (btnMobileMenu) btnMobileMenu.addEventListener('click', toggleSidebar);
+    if (btnCloseSidebar) btnCloseSidebar.addEventListener('click', closeSidebar);
+    if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeSidebar);
+
+    // Auto close drawer on navigation in small screens and smooth scroll to module
+    document.querySelectorAll('#sidebarNav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#') && href !== '#') {
+          e.preventDefault();
+          const targetEl = document.querySelector(href);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+        if (window.innerWidth < 1024) {
+          closeSidebar();
+        }
+      });
+    });
+
+    // Interactive YouTube Chip Selector
+    document.querySelectorAll('.filter-chip').forEach(chip => {
+      chip.addEventListener('click', function() {
+        document.querySelectorAll('.filter-chip').forEach(c => {
+          c.classList.remove('btn-sotcarga-orange', 'text-white', 'bg-[#1d4ed8]');
+          c.classList.add('bg-navy-surface', 'border', 'border-navy-border', 'text-navy-text');
+        });
+        this.classList.remove('bg-navy-surface', 'border', 'border-navy-border', 'text-navy-text');
+        this.classList.add('btn-sotcarga-orange', 'text-white');
+      });
+    });
+
+    // Close modal & sidebar on Escape key
+    window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        closeMobileMenu();
+        closeUploadModal();
+        closeSidebar();
+      }
+    });
+
+    // Reset drawer state on desktop resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        if (sidebarBackdrop) sidebarBackdrop.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden', 'lg:overflow-auto');
       }
     });
   </script>
+</div><div class="hidden" id="searchEngineScriptContainer"><script>window.addEventListener('DOMContentLoaded',function(){const searchInput=document.getElementById('globalSearchInput');const searchBtn=document.getElementById('globalSearchBtn');const clearBtn=document.getElementById('clearSearchBtn');const emptyState=document.getElementById('searchEmptyState');const resetBtn=document.getElementById('btnResetSearch');const moduleItems=document.querySelectorAll('.module-search-item');function normalize(text){return(text||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();}function performSearch(scrollOnMatch){const term=normalize(searchInput?searchInput.value:'');if(clearBtn){if(term.length>0){clearBtn.classList.remove('hidden');}else{clearBtn.classList.add('hidden');}}let matchedCount=0;let firstMatch=null;moduleItems.forEach(item=>{const text=normalize(item.innerText);const isMatch=!term||text.includes(term);if(isMatch){item.classList.remove('hidden');matchedCount++;if(!firstMatch)firstMatch=item;}else{item.classList.add('hidden');}});if(emptyState){if(matchedCount===0&&term.length>0){emptyState.classList.remove('hidden');}else{emptyState.classList.add('hidden');}}if(scrollOnMatch&&firstMatch&&term.length>0){firstMatch.scrollIntoView({behavior:'smooth',block:'start'});}}if(searchInput){searchInput.addEventListener('input',function(){performSearch(false);});searchInput.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();performSearch(true);}});window.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();searchInput.focus();searchInput.select();}});}if(searchBtn){searchBtn.addEventListener('click',function(e){e.preventDefault();performSearch(true);});}if(clearBtn){clearBtn.addEventListener('click',function(){if(searchInput){searchInput.value='';searchInput.focus();}performSearch(false);});}if(resetBtn){resetBtn.addEventListener('click',function(){if(searchInput){searchInput.value='';searchInput.focus();}performSearch(false);});}});</script></div></main></div>
+<style>.text-orange-400, .text-orange-300, .hover\:text-orange-400:hover, .hover\:text-orange-300:hover { color: #c4b5fd !important; }</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body></html>
