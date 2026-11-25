@@ -1,5 +1,5 @@
-<!DOCTYPE html><html class="dark scroll-smooth" lang="es" style="scroll-behavior: smooth; scrollbar-gutter: stable; height: auto; min-height: 100% !important; touch-action: pan-y !important; pointer-events: auto !important;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style id="custom-scrollbar-style">html { overflow-y: scroll !important; scrollbar-gutter: stable; } ::-webkit-scrollbar { width: 12px !important; height: 12px !important; display: block !important; } ::-webkit-scrollbar-track { background: #060e1e !important; border-left: 1px solid rgba(255, 255, 255, 0.08); } ::-webkit-scrollbar-thumb { background: #2563eb !important; border-radius: 6px !important; border: 2px solid #060e1e !important; } ::-webkit-scrollbar-thumb:hover { background: #3b82f6 !important; } * { scrollbar-width: auto !important; scrollbar-color: #2563eb #060e1e !important; }</style><style id="ai-glow-style">@property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; } @keyframes aiBorderRotate { 0% { --angle: 0deg; } 100% { --angle: 360deg; } } @keyframes aiGlowShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } } .ai-glow-btn { position: relative; z-index: 1; border: 1px solid transparent !important; background-clip: padding-box; box-shadow: 0 0 14px rgba(56, 189, 248, 0.4), 0 0 24px rgba(168, 85, 247, 0.28) !important; transition: transform 0.2s ease, box-shadow 0.2s ease; } .ai-glow-btn::before { content: ''; position: absolute; inset: -2px; border-radius: inherit; padding: 2px; background: conic-gradient(from var(--angle), #38bdf8, #3b82f6, #a855f7, #ec4899, #f59e0b, #38bdf8); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; animation: aiBorderRotate 4s linear infinite; z-index: -1; } .ai-glow-btn:hover { transform: translateY(-1px); box-shadow: 0 0 20px rgba(56, 189, 248, 0.6), 0 0 35px rgba(168, 85, 247, 0.45) !important; } .ai-glow-pill { position: relative; z-index: 1; } .ai-glow-pill::before { content: ''; position: absolute; inset: -1px; border-radius: inherit; padding: 1.5px; background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc, #38bdf8); background-size: 200% 200%; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; animation: aiGlowShift 3s ease infinite; z-index: -1; opacity: 0.85; }</style><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+<!DOCTYPE html><html class="dark scroll-smooth" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
 .sotcarga-header-gradient {
   background: linear-gradient(180deg, #3d5885 0%, #20355f 30%, #0d1e44 70%, #05132d 100%);
   border-bottom: 1px solid rgba(147, 185, 237, 0.28);
@@ -14,67 +14,657 @@
   background: linear-gradient(180deg, #ff881a 0%, #cc4e00 100%);
   box-shadow: 0 4px 14px rgba(255, 102, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
-</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"navy-bg":"#05132d","navy-surface":"#0a1b3d","navy-card":"#0e224b","navy-header":"#122753","navy-border":"#1a3365","navy-border-subtle":"#132850","navy-muted":"#9bb2d6","navy-text":"#f1f6ff","orange-brand":"#ff6600","orange-light":"#ff8533","orange-hover":"#ea580c","semantic-danger":"#EF4444","on-tertiary":"#ffffff","on-background":"#f1f6ff","outline":"#6782ad","semantic-success":"#10B981","surface-tint":"#ff6600","primary":"#f1f6ff","primary-container":"#ff6600","surface-container-low":"#071633","surface-container-lowest":"#030e24","surface-variant":"#102552","secondary-container":"#ff6600","on-secondary":"#ffffff","surface-container-highest":"#1d386d","on-error":"#ffffff","on-surface":"#f1f6ff","surface-container-high":"#0e224b","surface-bright":"#1e3b74","background":"#05132d","error":"#f87171","semantic-warning":"#F59E0B","on-surface-variant":"#9bb2d6","border-subtle":"#1a3365","border-strong":"#2a4b88","secondary":"#ff6600"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"1rem","space-lg":"1.25rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-desktop":"1.5rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","margin-tablet":"1.5rem","margin-desktop":"2rem"},fontFamily:{"body-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Inter"],"data-mono":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"600"}],"data-mono":["12px",{lineHeight:"16px",letterSpacing:"0",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}]}}}}</script><style>.animated-sotcarga-logo { filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.45)); transition: transform 0.3s ease; } @keyframes sotcarga-pulse-spin { 0% { filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4)); } 50% { filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.7)); } 100% { filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4)); } } .animated-sotcarga-logo:hover { transform: scale(1.05); }</style></head><body class="bg-navy-bg font-body-md text-navy-text antialiased" style="background-image: linear-gradient(rgba(8, 19, 41, 0.75), rgba(8, 19, 41, 0.88)), url(&quot;https://lh3.googleusercontent.com/aida/ALJJyrBkk2C9pd-yqek3TOpZAmep4ehyaSlmaJ0D6pFXtJjjSrmgodEACI5SjD9ysCyaJxc9vjgdrrIMcHPnYJYjBdt_aOyaxj4GXpdTAXG0Bc4pjm9Ivr3kMy6tJ_-xuAZrfGfm-gv7hOhFTkrtOSuFkCxG5_g076uYTU2zv3dPRcbEYjsYC9ivOwchPQ-v7yYe_Pq_-GxgKlS8v4CWQdxXjDQC7Z1SwjzrUUBfIiqYF24&quot;); background-attachment: fixed; background-size: cover; background-position: center top; background-repeat: no-repeat; height: auto !important; min-height: 100% !important; touch-action: pan-y !important; pointer-events: auto !important;"><header class="fixed top-0 left-0 right-0 h-20 py-4 sotcarga-header-gradient z-50 flex items-center justify-between px-3 sm:px-4 md:px-margin-desktop gap-2 sm:gap-4"><div class="flex items-center gap-2 sm:gap-space-md min-w-0"><button aria-label="Abrir menú" class="p-space-xs rounded-lg text-white/90 hover:bg-white/10 hover:text-white transition-colors flex items-center justify-center lg:hidden focus:outline-none focus:ring-2 focus:ring-blue-400" id="btnMobileMenu" type="button"><span class="material-symbols-outlined text-[28px]">menu</span></button><div class="flex items-center gap-2 sm:gap-3 min-w-0"><div class="relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shrink-0" style="border-radius: 9999px; overflow: hidden; clip-path: circle(50%); background: transparent;"><img alt="SOTCARGA SAS Logo" class="w-full h-full object-contain block animated-sotcarga-logo drop-shadow-sm" src="https://www.sotcarga.com/images/sotcarga.gif" style="border-radius: 9999px; clip-path: circle(50%); mix-blend-mode: screen; background: transparent; object-fit: cover;"></div><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-1.5 sm:gap-2"><span class="leading-tight text-white font-extrabold tracking-tight drop-shadow-sm uppercase text-xl sm:text-2xl lg:text-[34px]">Sotcarga S.A.S&nbsp;</span><span class="hidden sm:inline font-data-mono text-data-mono bg-[#1d4ed8]/30 text-blue-200 border border-blue-500/40 px-space-xs rounded font-semibold text-[10px] sm:text-data-mono whitespace-nowrap">ERP SÍSIFO</span></div><span class="hidden md:block font-label-sm text-label-sm text-blue-200/80 font-medium leading-tight truncate">Video &amp; Manuales Operativos</span></div></div></div><div class="hidden sm:flex flex-1 max-w-xl lg:max-w-2xl mx-2 md:mx-auto items-center justify-center"><div class="w-full flex items-center bg-navy-bg/70 border border-white/20 focus-within:border-orange-500 rounded-xl px-space-md py-space-xs gap-space-sm transition-colors shadow-inner"><span class="material-symbols-outlined text-blue-300 text-[20px] shrink-0">search</span><input class="w-full bg-transparent font-body-md text-body-md text-white placeholder:text-blue-200/60 focus:outline-none" id="globalSearchInput" placeholder="Buscar videos tutoriales, normatividad RNDC, facturación..." type="text"><button class="hidden text-blue-200/70 hover:text-white transition-colors p-0.5 rounded flex items-center justify-center shrink-0" id="clearSearchBtn" title="Limpiar búsqueda" type="button"><span class="material-symbols-outlined text-[18px]">close</span></button><button class="shrink-0 px-3 py-1 rounded-lg bg-[#1d4ed8] hover:bg-[#1e40af] text-white font-label-sm shadow-md transition-all flex items-center gap-1 font-semibold border border-blue-400/50" id="globalSearchBtn" type="button"><span class="material-symbols-outlined text-[16px]">search</span><span>Buscar</span></button></div></div><div class="flex items-center gap-2 sm:gap-space-md justify-end shrink-0"><div class="relative flex items-center"><button class="p-space-xs rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-colors relative flex items-center justify-center" type="button"><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span></button></div><a class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-navy-bg/50 border border-white/20 text-white font-label-sm text-label-sm hover:border-emerald-500/60 transition-colors" href="https://wa.me/573227145200" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.28 4.95L2 22l5.22-1.3c1.45.75 3.08 1.18 4.82 1.18 5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.82 14.22c-.24.67-1.39 1.28-1.92 1.34-.51.05-1.16.08-3.75-.98-3.13-1.28-5.14-4.47-5.3-4.68-.16-.21-1.27-1.69-1.27-3.23 0-1.54.8-2.3 1.09-2.61.29-.31.64-.39.85-.39.21 0 .43 0 .61.01.2.01.46-.07.72.55.27.64.91 2.22.99 2.38.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.16-.33.33-.14.65.19.32.84 1.38 1.8 2.24 1.24 1.1 2.28 1.44 2.61 1.6.33.16.53.13.72-.08.2-.22.84-.98 1.07-1.32.22-.33.45-.28.76-.16.31.12 1.99.94 2.33 1.11.34.17.57.26.65.4.08.14.08.82-.16 1.49z"></path></svg><span class="text-white/95 font-medium whitespace-nowrap">WS 3227145200</span></a><div class="w-8 h-8 rounded-full bg-white/15 border border-white/30 flex items-center justify-center shadow-inner"><span class="material-symbols-outlined text-white text-[18px]">person</span></div></div></header><div class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden transition-opacity duration-300 lg:hidden pointer-events-none" id="sidebarBackdrop"></div><aside class="fixed left-0 top-0 lg:top-20 bottom-0 w-72 sm:w-80 lg:w-64 bg-navy-surface border-r border-navy-border shadow-2xl z-50 lg:z-40 flex flex-col py-space-md overflow-y-auto -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out" id="sidebarDrawer"><div class="flex items-center justify-between px-space-md pb-space-sm mb-space-xs border-b border-navy-border lg:hidden"><div class="flex items-center gap-2"><div class="w-8 h-8 flex items-center justify-center shrink-0" style="border-radius: 9999px; overflow: hidden; clip-path: circle(50%); background: transparent;"><img alt="SOTCARGA SAS Logo" class="w-full h-full object-contain block animated-sotcarga-logo drop-shadow-sm" src="https://www.sotcarga.com/images/sotcarga.gif" style="border-radius: 9999px; clip-path: circle(50%); mix-blend-mode: screen; background: transparent; object-fit: cover;"></div><span class="font-headline-sm text-headline-sm text-white font-bold tracking-tight">SOTCARGA ERP</span></div><button aria-label="Cerrar menú" class="p-1 rounded-lg text-white/70 hover:bg-white/10 hover:text-white transition-colors flex items-center justify-center" id="btnCloseSidebar" type="button"><span class="material-symbols-outlined text-[24px]">close</span></button></div><nav class="flex flex-col gap-space-xs px-space-md flex-1" id="sidebarNav"><div class="text-[20px] text-white px-space-sm py-space-xs uppercase tracking-wider font-bold">Navegación</div><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md bg-blue-600/20 text-blue-300 border border-blue-500/40 transition-colors font-semibold" data-path="inicio-videos" href="#"><span class="material-symbols-outlined text-[20px] text-blue-400">play_circle</span><span class="text-white">Inicio / Videos</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-navy-text transition-colors" data-path="manuales-y-documentos" href="#manuales-oficiales"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Manuales y PDFs</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-navy-text transition-colors" data-path="biblioteca-personal" href="#"><span class="material-symbols-outlined text-[20px]">video_library</span><span>Videos Tutoriales</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-navy-text transition-colors" data-path="historial-de-reproduccion" href="#"></a><div class="my-space-xs"><div class="p-space-md rounded-xl bg-navy-card border border-orange-500/40 flex flex-col gap-space-xs shadow-lg"><div class="flex items-center gap-space-xs text-orange-400 font-headline-sm text-headline-sm font-bold tracking-wider"><span class="material-symbols-outlined text-[20px] text-orange-400">support_agent</span><span class="font-bold text-white">Mesa de Ayuda</span></div><p class="font-body-sm text-body-sm text-navy-muted">Soporte técnico directo ERP Sísifo</p><a class="flex items-center gap-space-xs font-data-mono text-data-mono text-orange-300 font-semibold mt-space-xs hover:underline" href="https://wa.me/573227145200" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-4 h-4 text-emerald-400 shrink-0 fill-current" viewBox="0 0 24 24"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.28 4.95L2 22l5.22-1.3c1.45.75 3.08 1.18 4.82 1.18 5.52 0 10-4.48 10-10s-4.48-10-10-10zm5.82 14.22c-.24.67-1.39 1.28-1.92 1.34-.51.05-1.16.08-3.75-.98-3.13-1.28-5.14-4.47-5.3-4.68-.16-.21-1.27-1.69-1.27-3.23 0-1.54.8-2.3 1.09-2.61.29-.31.64-.39.85-.39.21 0 .43 0 .61.01.2.01.46-.07.72.55.27.64.91 2.22.99 2.38.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.16-.33.33-.14.65.19.32.84 1.38 1.8 2.24 1.24 1.1 2.28 1.44 2.61 1.6.33.16.53.13.72-.08.2-.22.84-.98 1.07-1.32.22-.33.45-.28.76-.16.31.12 1.99.94 2.33 1.11.34.17.57.26.65.4.08.14.08.82-.16 1.49z"></path></svg><span>+(57) 322-7145200</span></a><div class="flex items-center gap-space-xs font-data-mono text-[11px] text-blue-200/80"><span class="material-symbols-outlined text-[14px]">schedule</span><span>Lun - Vier: 8:00 AM - 6:00 PM</span></div><div class="flex items-center gap-space-xs font-data-mono text-[11px] text-blue-200/80"><span class="material-symbols-outlined text-[14px]">schedule</span><span>Sábados&nbsp; : 8:00 AM - 12:00 PM</span></div></div></div><div class="text-[20px] text-white px-space-sm pt-space-md pb-space-xs uppercase tracking-wider font-bold">Módulos ERP Sísifo</div><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-orange-400 transition-colors" data-path="entorno" href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"><span class="material-symbols-outlined text-[20px] text-blue-300">desktop_windows</span><span>Módulo Entorno Sísifo</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-orange-400 transition-colors" data-path="contabilidad" href="#modulo-contabilidad"><span class="material-symbols-outlined text-[20px] text-cyan-400">account_balance</span><span>Módulo de Contabilidad</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-orange-400 transition-colors" data-path="nomina" href="#modulo-nomina"><span class="material-symbols-outlined text-[20px] text-emerald-400">badge</span><span>Módulo de Nomina</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg font-body-md text-body-md text-navy-muted hover:bg-navy-card hover:text-orange-400 transition-colors" data-path="documento-soporte" href="#modulo-documento-soporte"><span class="material-symbols-outlined text-[20px] text-orange-400">description</span><span>Módulo de Documento Soporte</span></a></nav></aside><div class="pl-0 lg:pl-64 transition-all duration-300"><main class="w-full pt-20 px-4 sm:px-6 lg:px-gutter-desktop pb-space-xl min-h-screen bg-navy-bg/50"><div class="flex flex-col w-full mx-auto">
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"navy-bg":"#05132d","navy-surface":"#0a1b3d","navy-card":"#0e224b","navy-header":"#122753","navy-border":"#1a3365","navy-border-subtle":"#132850","navy-muted":"#9bb2d6","navy-text":"#f1f6ff","orange-brand":"#ff6600","orange-light":"#ff8533","orange-hover":"#ea580c","semantic-danger":"#EF4444","on-tertiary":"#ffffff","on-background":"#f1f6ff","outline":"#6782ad","semantic-success":"#10B981","surface-tint":"#ff6600","primary":"#f1f6ff","primary-container":"#ff6600","surface-container-low":"#071633","surface-container-lowest":"#030e24","surface-variant":"#102552","secondary-container":"#ff6600","on-secondary":"#ffffff","surface-container-highest":"#1d386d","on-error":"#ffffff","on-surface":"#f1f6ff","surface-container-high":"#0e224b","surface-bright":"#1e3b74","background":"#05132d","error":"#f87171","semantic-warning":"#F59E0B","on-surface-variant":"#9bb2d6","border-subtle":"#1a3365","border-strong":"#2a4b88","secondary":"#ff6600"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"1rem","space-lg":"1.25rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter-desktop":"1.5rem","gutter":"1rem","space-md":"0.75rem","space-xl":"2rem","margin-tablet":"1.5rem","margin-desktop":"2rem"},fontFamily:{"body-md":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-md":["Inter"],"data-mono":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-xl-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["13px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"600"}],"data-mono":["12px",{lineHeight:"16px",letterSpacing:"0",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}]}}}}</script><style>.animated-sotcarga-logo { filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.45)); transition: transform 0.3s ease; } @keyframes sotcarga-pulse-spin { 0% { filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4)); } 50% { filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.7)); } 100% { filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.4)); } } .animated-sotcarga-logo:hover { transform: scale(1.05); }</style><link rel="icon" type="image/x-icon" href="https://www.sotcarga.com/images/icono.ico"><link rel="shortcut icon" type="image/x-icon" href="https://www.sotcarga.com/images/icono.ico"><link rel="apple-touch-icon" href="https://www.sotcarga.com/images/icono.ico"><link rel="bookmark" href="https://www.sotcarga.com/images/icono.ico"><style id="ai-border-styles">
+.ai-electric-border-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: rgba(15, 23, 42, 0.6);
+  box-shadow: 0 0 20px -5px rgba(56, 189, 248, 0.15), 0 0 12px -3px rgba(168, 85, 247, 0.12);
+}
+
+.ai-electric-border-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent,
+    rgba(56, 189, 248, 0.65),
+    #3b82f6,
+    #a855f7,
+    #10b981,
+    transparent 65%
+  );
+  animation: aiBorderSpin 48s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.ai-electric-border-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes aiBorderSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-electric-border-card::before {
+    animation: none;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), rgba(168, 85, 247, 0.3));
+  }
+}
+</style></head><body class="bg-navy-bg font-body-md text-navy-text antialiased" style="background-image: linear-gradient(rgba(8, 19, 41, 0.75), rgba(8, 19, 41, 0.88)), url(&quot;https://lh3.googleusercontent.com/aida/ALJJyrBkk2C9pd-yqek3TOpZAmep4ehyaSlmaJ0D6pFXtJjjSrmgodEACI5SjD9ysCyaJxc9vjgdrrIMcHPnYJYjBdt_aOyaxj4GXpdTAXG0Bc4pjm9Ivr3kMy6tJ_-xuAZrfGfm-gv7hOhFTkrtOSuFkCxG5_g076uYTU2zv3dPRcbEYjsYC9ivOwchPQ-v7yYe_Pq_-GxgKlS8v4CWQdxXjDQC7Z1SwjzrUUBfIiqYF24&quot;); background-attachment: fixed; background-size: cover; background-position: center top; background-repeat: no-repeat;"><style>
+@keyframes ai-beam-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.ai-shimmer-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  padding: 1px;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.12), inset 0 0 12px rgba(139, 92, 246, 0.08);
+}
+.ai-shimmer-chip::before {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 400%;
+  height: 400%;
+  background: conic-gradient(from 0deg at 50% 50%, rgba(56, 189, 248, 0.1) 0deg, rgba(56, 189, 248, 0.9) 60deg, rgba(168, 85, 247, 0.9) 120deg, rgba(236, 72, 153, 0.8) 180deg, rgba(56, 189, 248, 0.8) 270deg, rgba(56, 189, 248, 0.1) 360deg);
+  animation: ai-beam-rotate 4s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+.ai-shimmer-chip:hover::before {
+  opacity: 1;
+  filter: brightness(1.35) saturate(1.2);
+  animation-duration: 2.2s;
+}
+.ai-shimmer-chip:hover {
+  box-shadow: 0 0 22px rgba(96, 165, 250, 0.45), 0 0 35px rgba(168, 85, 247, 0.3), inset 0 0 15px rgba(56, 189, 248, 0.25);
+  transform: translateY(-1px);
+}
+.ai-shimmer-content {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 0.375rem 1rem;
+  border-radius: calc(0.5rem - 1px);
+  background: rgba(10, 27, 61, 0.92);
+  backdrop-filter: blur(12px);
+  transition: background 0.2s ease;
+}
+.ai-shimmer-chip:hover .ai-shimmer-content {
+  background: rgba(14, 34, 75, 0.96);
+}
+</style><header class="fixed top-0 left-0 right-0 h-20 py-4 sotcarga-header-gradient z-50 flex items-center justify-between px-3 sm:px-4 md:px-margin-desktop gap-2 sm:gap-4"><div class="flex items-center gap-2 sm:gap-space-md min-w-0"><div class="flex items-center gap-3 min-w-0"><div class="relative w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center shrink-0" style="width: 48px; height: 48px; border-radius: 9999px; overflow: hidden; clip-path: circle(50%); background: transparent;"><img alt="SOTCARGA SAS Logo" class="w-full h-full object-contain block animated-sotcarga-logo drop-shadow-sm" src="https://www.sotcarga.com/images/sotcarga.gif" style="border-radius: 9999px; clip-path: circle(50%); mix-blend-mode: screen; background: transparent; object-fit: cover;"></div><div class="flex items-center flex-wrap gap-2 min-w-0"><span class="text-white font-black tracking-tight drop-shadow-md uppercase text-2xl sm:text-3xl lg:text-[40px] font-headline-xl leading-none flex items-center">Sotcarga S.A.S</span><span class="hidden sm:inline-flex items-center font-data-mono text-data-mono bg-[#1d4ed8]/30 text-blue-200 border border-blue-500/40 px-space-xs rounded font-semibold text-[10px] sm:text-data-mono whitespace-nowrap h-6">ERP SÍSIFO</span><span class="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-xl text-lg sm:text-xl lg:text-2xl font-extrabold tracking-tight text-white font-headline-sm whitespace-nowrap"><span class="material-symbols-outlined text-blue-400 text-[24px]">shopping_cart_checkout</span><span>CENTRO DE PAGOS</span></span></div></div></div><div class="hidden sm:flex flex-1 max-w-xl lg:max-w-2xl mx-2 md:mx-auto items-center justify-center"></div><div class="flex items-center gap-2 sm:gap-space-md justify-end shrink-0"><a class="ai-shimmer-chip shrink-0 hidden md:inline-flex cursor-pointer" href="https://wa.me/573227145200" rel="noopener noreferrer" target="_blank"></a><span class="text-xs font-semibold tracking-wide text-white font-data-mono hidden sm:inline-block">NOMBRE DE LA EMPRESA</span><div class="w-8 h-8 rounded-full bg-white/15 border border-white/30 flex items-center justify-center shadow-inner ai-glow-btn ai-glow-pulse"><span class="material-symbols-outlined text-white text-[18px]">person</span></div></div><div class="ai-header-divider absolute bottom-0 left-0 right-0 h-[3px] overflow-hidden pointer-events-none z-20" style="box-shadow: rgba(0, 240, 255, 0.85) 0px 0px 14px, rgba(168, 85, 247, 0.6) 0px 0px 28px, rgba(255, 255, 255, 0.9) 0px 1px 2px;"><style>@keyframes ai-header-beam-flow { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } } .ai-header-beam-line { position: absolute; inset: 0; background: linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.3) 10%, #00f0ff 30%, #3b82f6 45%, #ffffff 55%, #a855f7 70%, #ec4899 85%, transparent 100%); width: 200%; height: 100%; animation: ai-header-beam-flow 8s linear infinite; filter: drop-shadow(0 0 10px #00f0ff) drop-shadow(0 0 20px #a855f7) drop-shadow(0 0 6px #ffffff); } .ai-header-base-line { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 240, 255, 0.25), rgba(59, 130, 246, 0.4), rgba(168, 85, 247, 0.35), rgba(0, 240, 255, 0.25)); box-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }</style><div class="ai-header-base-line"></div><div class="ai-header-beam-line"></div></div></header><div class="pl-0 transition-all duration-300"><main class="w-full px-4 sm:px-6 lg:px-gutter-desktop pb-space-xl min-h-screen bg-navy-bg/50 pt-28"><div class="flex flex-col w-full mx-auto">
 <!-- Horizontal Category Filters (YouTube style sticky chips bar) -->
-<div class="sticky top-20 z-30 bg-navy-bg/95 backdrop-blur-md py-space-sm -mx-4 sm:-mx-6 lg:-mx-gutter-desktop px-4 sm:px-6 lg:px-gutter-desktop mb-space-md border-b border-navy-border/80">
-<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar scroll-smooth"><a class="filter-chip ai-glow-pill shrink-0 px-space-md py-1.5 rounded-lg font-label-md text-label-md shadow-sm hover:bg-navy-card hover:border-blue-400/50 hover:text-blue-300 transition-all flex items-center gap-1.5 cursor-pointer bg-navy-surface border border-navy-border text-navy-text" href="#video-principal" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"><span class="material-symbols-outlined text-[16px] text-blue-300">desktop_windows</span><span>Entorno</span></a><a class="filter-chip ai-glow-pill shrink-0 px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-navy-surface border border-navy-border text-navy-text shadow-sm hover:bg-navy-card hover:border-cyan-500/50 hover:text-cyan-400 transition-all flex items-center gap-1.5 cursor-pointer" href="#modulo-contabilidad"><span class="material-symbols-outlined text-[16px] text-cyan-400">account_balance</span><span>Contabilidad</span></a><a class="filter-chip ai-glow-pill shrink-0 px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-navy-surface border border-navy-border text-navy-text shadow-sm hover:bg-navy-card hover:border-emerald-500/50 hover:text-emerald-400 transition-all flex items-center gap-1.5 cursor-pointer" href="#modulo-nomina"><span class="material-symbols-outlined text-[16px] text-emerald-400">badge</span><span>Nómina</span></a><a class="filter-chip ai-glow-pill shrink-0 px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-navy-surface border border-navy-border text-navy-text shadow-sm hover:bg-navy-card hover:border-orange-500/50 hover:text-orange-300 transition-all flex items-center gap-1.5 cursor-pointer" href="#modulo-documento-soporte"><span class="material-symbols-outlined text-[16px] text-orange-400">description</span><span>Doc Soporte</span></a></div>
-</div>
+
 <!-- Featured Master Tutorial (Cinema Spotlight) -->
-<section class="mb-space-xl" id="video-principal" style="scroll-margin-top: 130px;">
-<div class="bg-navy-surface border border-navy-border hover:border-orange-500/50 transition-colors rounded-xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 group">
-<!-- Media Player Stage -->
-<div class="relative lg:col-span-8 aspect-video bg-navy-bg overflow-hidden flex items-center justify-center cursor-pointer"><video class="w-full h-full object-cover" controls="" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuCXVtGX7FBUPABG-POs5qw3cUOUz6V43czraJTSXht7zOVnCqrb-JruwKgAFiB57e6w_r6Q-G9Goj6NqvCoNOA12ap9wHEK84O32RWS2Sdc_sQt8AOfpyOLGfyr88JBjsuqo2fOJHAWMZSaWNeEj4663qplER6n1GPm9nLWfrjITw77UcxFXQ3VDOkyon1i2ky6JYxgDuYh4mMDte9jV4GYqErgY_YOErj1CLh67c8-nBUj_uCItalq" preload="metadata"><source src="http://www.sotcarga.com/video/VIDEO%20ENTORNO%20SISIFO.mp4" type="video/mp4">Tu navegador no soporta la reproducción de video HTML5.</video><div class="absolute top-4 left-4 flex items-center gap-2 pointer-events-none z-10"><span class="px-2.5 py-1 rounded bg-[#1d4ed8] text-white font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5 shadow-md font-semibold border border-blue-400/40">NUEVO TUTORIAL OPERATIVO</span><span class="px-2 py-0.5 rounded bg-navy-header/90 backdrop-blur-md text-blue-200 border border-blue-400/30 font-data-mono text-data-mono font-medium">Módulo RNDC v8.4</span></div></div>
-<!-- Video Details & Attached Resource -->
-<div class="lg:col-span-4 p-space-lg flex flex-col justify-between bg-navy-surface border-t lg:border-t-0 lg:border-l border-navy-border"><div class="flex flex-col gap-space-sm"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><div class="w-8 h-8 rounded-lg bg-blue-500/20 border border-blue-500/40 text-blue-400 flex items-center justify-center font-headline-sm text-headline-sm"><span class="material-symbols-outlined text-[18px]">verified</span></div><div><p class="font-label-md text-label-md text-white font-bold tracking-wide">Soporte Técnico Especializado</p><p class="font-label-sm text-label-sm text-navy-muted">Ministerio de Transporte / RNDC</p></div></div><span class="material-symbols-outlined text-navy-muted hover:text-white cursor-pointer text-[22px]">bookmark_border</span></div><div><h1 class="font-headline-md text-headline-md text-white font-bold leading-tight mt-1">Entorno del Sistema Sísifo de Sotcarga SAS</h1></div><div class="flex items-center gap-3 font-data-mono text-data-mono text-navy-muted"><span class="text-blue-300 font-semibold">2.8k vistas</span><span>•</span><span>Actualizado hace 2 días</span></div></div><!-- Attached Downloadable Manual Box with Blue Button --><div class="mt-space-md pt-space-sm bg-navy-card border border-navy-border p-space-sm rounded-xl flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-10 h-10 rounded-lg bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[24px]">picture_as_pdf</span></div><div class="flex flex-col min-w-0"><a class="font-label-md text-label-md text-navy-text truncate font-semibold hover:text-white hover:underline" href="https://www.sotcarga.com/manuales/pdf%20manual%20sisifo.pdf" target="_blank" rel="noopener noreferrer" download="Manual_Sisifo.pdf" title="Manual General Sísifo ERP">Manual_Sisifo.pdf</a><span class="font-data-mono text-data-mono text-navy-muted text-[11px]">&nbsp;Guía Oficial ERP Sísifo</span></div></div><a class="shrink-0 px-space-md py-2 rounded-lg bg-[#1d4ed8] hover:bg-[#1e40af] text-white font-label-md text-label-md shadow-md transition-all flex items-center gap-1.5 font-semibold border border-blue-400/50" href="https://www.sotcarga.com/manuales/pdf%20manual%20sisifo.pdf" target="_blank" rel="noopener noreferrer" download="pdf manual sisifo.pdf" title="Manual General Sísifo ERP"><span class="material-symbols-outlined text-[16px]">download</span><span>Descargar</span></a></div></div>
-</div>
-</section>
+<section class="mb-space-xl ai-electric-border-card p-1.5 mt-space-md" id="estado-cartera-mensual" style="scroll-margin-top: 90px; margin-bottom: 4rem;">
+  <!-- Header: Cartera & Resumen Global -->
+  <div class="mb-space-lg p-space-md sm:p-space-lg rounded-2xl bg-gradient-to-r from-navy-surface via-navy-card to-navy-surface border border-blue-500/30 shadow-xl relative overflow-hidden">
+    <div class="absolute -right-12 -top-12 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-10">
+      <div>
+        <div class="flex flex-wrap items-center gap-2 mb-1.5">
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 font-data-mono">
+            <span class="material-symbols-outlined text-[14px]">account_balance_wallet</span> Módulo de Cartera Corporativa
+          </span>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-500/20 text-blue-200 border border-blue-400/30 font-data-mono">
+            PERIODO FISCAL 2026
+          </span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-blue-400 text-[32px]">receipt_long</span>
+          Estado de Cartera &amp; Pagos pendientes</h2>
+        
+      </div>
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 shrink-0">
+        <div class="p-3 rounded-xl bg-navy-card/90 border border-blue-500/30 flex flex-col items-end shadow-inner">
+          <span class="text-[11px] font-data-mono text-navy-muted uppercase tracking-wider">Saldo Total Pendiente</span>
+          <div class="flex items-baseline gap-1 mt-0.5">
+            <span class="text-xl sm:text-2xl font-extrabold text-white font-data-mono">$ 5.420.000</span>
+            <span class="text-xs font-bold text-blue-300 font-data-mono">COP</span>
+          </div>
+          <span class="text-[10px] text-amber-400 font-data-mono font-medium mt-0.5 flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> 3 Facturas por liquidar
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pestañas de Filtrado por Mes -->
+    <div class="mt-space-md pt-3 border-t border-navy-border/60 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex flex-wrap items-center gap-2">
+        <button type="button" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-blue-600/30 border border-blue-400/50 text-white flex items-center gap-1.5 shadow-sm transition-all">
+          <span class="material-symbols-outlined text-[16px] text-blue-300">calendar_month</span>
+          <span>Todos los Meses</span>
+          <span class="px-1.5 py-0.2 rounded bg-blue-500/30 text-[10px] font-data-mono text-blue-200">3</span>
+        </button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-navy-card border border-navy-border text-navy-muted hover:text-white hover:border-blue-400/40 flex items-center gap-1.5 transition-colors">
+          <span>Noviembre 2026 (Actual)</span>
+          <span class="px-1.5 py-0.2 rounded bg-navy-surface text-[10px] font-data-mono text-emerald-400">1</span>
+        </button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-navy-card border border-navy-border text-navy-muted hover:text-white hover:border-blue-400/40 flex items-center gap-1.5 transition-colors">
+          <span>Octubre 2026</span>
+          <span class="px-1.5 py-0.2 rounded bg-navy-surface text-[10px] font-data-mono text-amber-400">1</span>
+        </button>
+        <button type="button" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-navy-card border border-navy-border text-navy-muted hover:text-white hover:border-blue-400/40 flex items-center gap-1.5 transition-colors">
+          <span>Septiembre 2026</span>
+          <span class="px-1.5 py-0.2 rounded bg-navy-surface text-[10px] font-data-mono text-rose-400">1</span>
+        </button>
+      </div>
+      <div class="flex items-center gap-2">
+        <button type="button" class="px-2.5 py-1.5 rounded-lg bg-navy-card border border-navy-border text-xs text-blue-200 hover:text-white flex items-center gap-1 font-medium transition-colors">
+          <span class="material-symbols-outlined text-[16px]">filter_list</span> Filtrar
+        </button>
+        <button type="button" class="px-2.5 py-1.5 rounded-lg bg-navy-card border border-navy-border text-xs text-blue-200 hover:text-white flex items-center gap-1 font-medium transition-colors">
+          <span class="material-symbols-outlined text-[16px]">download</span> Exportar Cartera
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lista Detallada de Facturas y Servicios Pendientes -->
+  <div class="flex flex-col gap-space-md mb-space-lg">
+    <!-- Item 1: Marzo 2026 (FAC-2026-94821) -->
+    <div class="rounded-2xl bg-navy-surface border border-blue-500/40 p-space-md sm:p-space-lg shadow-xl hover:border-blue-400/70 transition-all">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div class="flex items-start gap-3 flex-1 min-w-0">
+          <div class="pt-1">
+            <input type="checkbox" checked="" class="accent-blue-500 w-4 h-4 rounded cursor-pointer">
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-200 border border-blue-400/40 font-data-mono">NOVIEMBRE 2026</span>
+              <span class="font-data-mono text-xs font-bold text-white">FAC-2026-94821</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1">
+                <span class="material-symbols-outlined text-[12px]">timer</span> Vence en 3 días&nbsp;</span>
+              
+            </div>
+            <h4 class="text-base font-bold text-white tracking-tight flex items-center gap-2 flex-wrap">
+              <span>Manifiestos</span>
+              <span class="text-xs font-normal text-navy-muted">MAN-58291-BOG</span>
+            </h4>
+            <div class="flex flex-wrap items-center gap-3 mt-1.5 text-xs text-blue-200/90 font-medium">
+              
+              
+              
+              
+              
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-between lg:justify-end gap-4 w-full lg:w-auto pt-3 lg:pt-0 border-t lg:border-t-0 border-navy-border/50 shrink-0">
+          <div class="text-left lg:text-right">
+            <span class="text-[10px] font-data-mono text-navy-muted uppercase block">Importe a Liquidar</span>
+            <div class="flex items-baseline gap-1">
+              <span class="text-lg sm:text-xl font-extrabold text-white font-data-mono">$ 1.850.000</span>
+              <span class="text-xs font-bold text-blue-300 font-data-mono">COP</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="document.querySelector('#centro-pagos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold text-xs shadow-md border border-blue-400/40 flex items-center gap-1.5 transition-all">
+              <span class="material-symbols-outlined text-[16px]">credit_card</span> Pagar Ahora
+            </button>
+            <button type="button" class="p-2 rounded-xl bg-navy-card border border-navy-border hover:border-blue-400/40 text-blue-200 hover:text-white transition-colors" title="Ver Detalle / RNDC">
+              <span class="material-symbols-outlined text-[18px]">visibility</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2: Febrero 2026 (FAC-2026-92140) -->
+    <div class="rounded-2xl bg-navy-surface border border-navy-border p-space-md sm:p-space-lg shadow-xl hover:border-blue-400/50 transition-all">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div class="flex items-start gap-3 flex-1 min-w-0">
+          <div class="pt-1">
+            <input type="checkbox" checked="" class="accent-blue-500 w-4 h-4 rounded cursor-pointer">
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-navy-card text-blue-300 border border-navy-border font-data-mono">OCTUBRE 2026</span>
+              <span class="font-data-mono text-xs font-bold text-white">FAC-2026-92140</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 font-data-mono flex items-center gap-1">
+                <span class="material-symbols-outlined text-[12px]">pending_actions</span> Por Pagar&nbsp;</span>
+              
+            </div>
+            <h4 class="text-base font-bold text-white tracking-tight flex items-center gap-2 flex-wrap">
+              <span>Servicio Logístico&nbsp;</span>
+              <span class="text-xs font-normal text-navy-muted">• Referencia -49120-VAL</span>
+            </h4>
+            
+          </div>
+        </div>
+        <div class="flex items-center justify-between lg:justify-end gap-4 w-full lg:w-auto pt-3 lg:pt-0 border-t lg:border-t-0 border-navy-border/50 shrink-0">
+          <div class="text-left lg:text-right">
+            <span class="text-[10px] font-data-mono text-navy-muted uppercase block">Importe a Liquidar</span>
+            <div class="flex items-baseline gap-1">
+              <span class="text-lg sm:text-xl font-extrabold text-white font-data-mono">$ 2.150.000</span>
+              <span class="text-xs font-bold text-blue-300 font-data-mono">COP</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="document.querySelector('#centro-pagos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold text-xs shadow-md border border-blue-400/40 flex items-center gap-1.5 transition-all">
+              <span class="material-symbols-outlined text-[16px]">credit_card</span> Pagar Ahora
+            </button>
+            <button type="button" class="p-2 rounded-xl bg-navy-card border border-navy-border hover:border-blue-400/40 text-blue-200 hover:text-white transition-colors" title="Ver Detalle / RNDC">
+              <span class="material-symbols-outlined text-[18px]">visibility</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 3: Enero 2026 (FAC-2026-89512) -->
+    <div class="rounded-2xl bg-navy-surface border border-rose-500/30 p-space-md sm:p-space-lg shadow-xl hover:border-rose-400/60 transition-all">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div class="flex items-start gap-3 flex-1 min-w-0">
+          <div class="pt-1">
+            <input type="checkbox" checked="" class="accent-blue-500 w-4 h-4 rounded cursor-pointer">
+          </div>
+          <div class="min-w-0 flex-1">
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-navy-card text-blue-300 border border-navy-border font-data-mono">SEPTIEMBRE 2026</span>
+              <span class="font-data-mono text-xs font-bold text-white">FAC-2026-89512</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30 font-data-mono flex items-center gap-1">
+                <span class="material-symbols-outlined text-[12px]">warning</span> Vencida&nbsp;</span>
+              
+            </div>
+            <h4 class="text-base font-bold text-white tracking-tight flex items-center gap-2 flex-wrap">
+              <span>Facturacion</span>
+              <span class="text-xs font-normal text-navy-muted">38910-ATL</span>
+            </h4>
+            
+          </div>
+        </div>
+        <div class="flex items-center justify-between lg:justify-end gap-4 w-full lg:w-auto pt-3 lg:pt-0 border-t lg:border-t-0 border-navy-border/50 shrink-0">
+          <div class="text-left lg:text-right">
+            <span class="text-[10px] font-data-mono text-navy-muted uppercase block">Importe a Liquidar</span>
+            <div class="flex items-baseline gap-1">
+              <span class="text-lg sm:text-xl font-extrabold text-white font-data-mono">$ 1.420.000</span>
+              <span class="text-xs font-bold text-blue-300 font-data-mono">COP</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="document.querySelector('#centro-pagos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white font-bold text-xs shadow-md border border-blue-400/40 flex items-center gap-1.5 transition-all">
+              <span class="material-symbols-outlined text-[16px]">credit_card</span> Pagar Ahora
+            </button>
+            <button type="button" class="p-2 rounded-xl bg-navy-card border border-navy-border hover:border-blue-400/40 text-blue-200 hover:text-white transition-colors" title="Ver Detalle / RNDC">
+              <span class="material-symbols-outlined text-[18px]">visibility</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tarjeta Inferior: Resumen de Últimos Pagos Realizados -->
+  
+</section><section class="mb-space-xl ai-electric-border-card p-1.5 mt-12" id="detalle-servicio-carrito" style="scroll-margin-top: 90px; margin-top: 6rem; margin-bottom: 4rem;"><div class="mb-space-lg p-space-md sm:p-space-lg rounded-2xl bg-gradient-to-r from-navy-surface via-navy-card to-navy-surface border border-blue-500/30 shadow-xl relative overflow-hidden"><div class="absolute -right-12 -top-12 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div><div class="flex flex-col md:flex-row md:items-center justify-between gap-3 relative z-10"><div><div class="flex flex-wrap items-center gap-2 mb-1.5"><span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 font-data-mono"><span class="material-symbols-outlined text-[14px]">verified</span>Pago Pendiente</span></div><h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight flex items-center gap-2.5"><span class="material-symbols-outlined text-blue-400 text-[32px]">shopping_cart_checkout</span> Detalle del Servicio&nbsp;</h2></div><div class="flex items-center gap-2 shrink-0"><span class="px-3 py-1.5 rounded-xl bg-navy-card border border-navy-border text-xs text-blue-200 flex items-center gap-1.5 font-data-mono"><span class="material-symbols-outlined text-[16px] text-emerald-400">local_shipping</span> Manifiestos: MAN-2026-11</span></div></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start"><div class="lg:col-span-8 flex flex-col gap-space-md"><div class="rounded-2xl bg-navy-surface border border-navy-border shadow-xl overflow-hidden"><div class="p-space-md bg-navy-card/80 border-b border-navy-border flex flex-wrap items-center justify-between gap-2"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-[20px]">apartment</span><span class="text-xs sm:text-sm font-semibold text-white">Facturado por <strong class="text-blue-200">Sotcarga S.A.S. - Transporte &amp; Logística</strong></span></div><span class="px-2 py-0.5 rounded text-[11px] font-data-mono font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> RNDC Operativo</span></div><div class="p-space-md sm:p-space-lg flex flex-col md:flex-row gap-4 sm:gap-6"><div class="w-full md:w-44 h-36 md:h-auto rounded-xl bg-gradient-to-br from-navy-card to-blue-950/40 border border-blue-500/20 p-3 flex flex-col items-center justify-center text-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[48px] text-blue-300 mb-1">local_shipping</span><span class="text-[11px] font-bold text-white uppercase tracking-wider font-data-mono">QR</span><span class="text-[10px] text-navy-muted font-data-mono"><br></span></div><div class="flex-1 flex flex-col justify-between min-w-0"><div class="flex flex-col gap-2"><div class="flex flex-wrap items-start justify-between gap-2"><h3 class="text-base sm:text-lg font-bold text-white tracking-tight leading-snug">Servicio del mes de Noviembre</h3></div><p class="text-xs text-blue-200/90 font-medium flex items-center gap-1 flex-wrap"><span class="text-white font-bold">CLOUD COMPUTING
+SISTEMA SHIPPING JOURNEY, SISTEMA
+OPERATIVO SÍSIFO, SISTEMA DE FACTURACIÓN
+ELECTRÓNICA Y REGISTRO DE FACTURAS
+ELECTRÓNICAS AL RNDC MES DE OCTUBRE
+2026&nbsp;</span></p><div class="flex flex-wrap items-center gap-1.5 mt-1"><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-500/10 text-blue-300 border border-blue-500/20 font-data-mono">Despacho Programado</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-data-mono">Monioreo&nbsp;</span></div></div><div class="pt-4 mt-3 border-t border-navy-border flex flex-wrap items-center justify-between gap-4"><div class="flex items-center gap-2"></div><div class="text-right ml-auto"><span class="text-[10px] font-data-mono text-navy-muted uppercase block">Total Liquidado</span><div class="flex items-baseline justify-end gap-1"><span class="text-xl sm:text-2xl font-extrabold text-white font-data-mono">$ 1.850.000</span><span class="text-xs font-bold text-blue-300 font-data-mono">COP</span></div></div></div></div></div><div class="px-space-md sm:px-space-lg py-2.5 bg-navy-card/40 border-t border-navy-border flex flex-wrap items-center justify-between gap-2 text-xs"><div class="flex items-center gap-1.5 text-navy-muted font-data-mono"></div></div></div></div><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="rounded-2xl bg-navy-surface border border-blue-500/30 p-space-md sm:p-space-lg shadow-xl relative overflow-hidden"><div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400"></div><div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-navy-border"><h3 class="text-base font-bold text-white tracking-tight flex items-center gap-1.5"><span class="material-symbols-outlined text-blue-400 text-[20px]">receipt_long</span> Resumen de la Orden&nbsp;</h3></div><div class="flex flex-col gap-2.5 text-xs sm:text-sm pb-space-md border-b border-navy-border"><div class="flex justify-between items-center"><span class="text-navy-muted">Servicios (1):</span><span class="font-data-mono text-white">$ 2.680.000 COP</span></div><div class="flex justify-between items-center"><span class="text-navy-muted">Impuestos :</span><span class="font-data-mono text-emerald-400 font-semibold">$ 830.000 COP</span></div><div class="flex justify-between items-center"><span class="text-navy-muted">Tasa de procesamiento:</span><span class="font-data-mono text-emerald-400 font-semibold">$ 0 COP (Bonificada)</span></div></div><div class="py-space-md"><span class="block text-xs uppercase tracking-wider text-navy-muted font-semibold mb-1">TOTAL A LIQUIDAR</span><div class="flex items-baseline justify-between"><span class="text-2xl sm:text-3xl font-extrabold text-white font-data-mono tracking-tight">$ 1.850.000</span><span class="text-xs font-bold text-blue-300 font-data-mono">COP</span></div></div><button type="button" onclick="document.querySelector('#centro-pagos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });" class="w-full py-3.5 px-space-md rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold text-sm tracking-wide shadow-lg shadow-blue-600/30 border border-blue-400/40 flex items-center justify-center gap-2 transition-all cursor-pointer transform hover:-translate-y-0.5"><span class="material-symbols-outlined text-[20px]">arrow_downward</span><span>Continuar al Pago Seguro ↓</span></button><div class="mt-space-md pt-space-sm border-t border-navy-border flex items-center justify-center gap-2 text-xs text-navy-muted font-data-mono"><span class="material-symbols-outlined text-emerald-400 text-[16px]">lock</span><span>Transacción encriptada y protegida</span></div></div></div></div></section><section class="mb-space-xl ai-electric-border-card p-1.5 mt-12" id="centro-pagos" style="scroll-margin-top: 100px; margin-top: 6rem; margin-bottom: 4rem;">
+  <!-- Encabezado de la Pasarela Oficial -->
+  <div class="mb-space-lg p-space-md sm:p-space-lg rounded-2xl bg-gradient-to-r from-navy-surface via-navy-card to-navy-surface border border-blue-500/30 shadow-xl relative overflow-hidden">
+    <div class="absolute -right-12 -top-12 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-10">
+      <div>
+        <div class="flex flex-wrap items-center gap-2 mb-1.5">
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 font-data-mono">
+            <span class="material-symbols-outlined text-[14px]">verified_user</span> Seguridad SSL 256-Bit • Homologado DIAN / RNDC
+          </span>
+          
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-blue-400 text-[32px]">payments</span>
+          Centro de Pagos&nbsp;</h1>
+        
+      </div>
+      <div class="flex items-center gap-2 self-start md:self-auto shrink-0">
+        <div class="text-right hidden sm:block">
+          <span class="text-[11px] block font-data-mono text-navy-muted uppercase tracking-wider">Pasarela Activa</span>
+          <span class="text-xs font-semibold text-emerald-400 flex items-center justify-end gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Red ACH / PSE Operativa
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid Principal de 2 Columnas -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+    <!-- Columna Izquierda: Formularios (Datos + Medios de Pago) -->
+    <div class="lg:col-span-8 flex flex-col gap-space-lg">
+      
+      <!-- Contenedor 1: Datos del Pagador y Factura -->
+      <div class="rounded-2xl bg-navy-surface border border-navy-border p-space-md sm:p-space-lg shadow-xl">
+        <div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-navy-border">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-blue-600/30 border border-blue-400/40 text-blue-300 flex items-center justify-center font-bold text-sm">1</span>
+            <h2 class="text-lg font-bold text-white tracking-tight">Datos del Pagador y Factura / Manifiesto</h2>
+          </div>
+          <span class="text-xs font-data-mono text-blue-300/80">Campos Obligatorios (*)</span>
+        </div>
+
+        <!-- Tipo de Persona -->
+        <div class="mb-space-md">
+          <label class="block text-xs font-semibold text-blue-200 uppercase tracking-wider mb-2">Tipo de Persona *</label>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="flex items-center gap-3 p-3 rounded-xl border border-blue-500/40 bg-navy-card/90 cursor-pointer hover:border-blue-400 transition-colors">
+              <input type="radio" name="tipo_persona" value="juridica" checked="" class="accent-blue-500 w-4 h-4">
+              <div>
+                <span class="block text-sm font-semibold text-white">Persona Jurídica</span>
+                <span class="block text-[11px] text-navy-muted">Empresas, Sociedades, Agencias</span>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 rounded-xl border border-navy-border bg-navy-card/50 cursor-pointer hover:border-blue-500/40 transition-colors">
+              <input type="radio" name="tipo_persona" value="natural" class="accent-blue-500 w-4 h-4">
+              <div>
+                <span class="block text-sm font-semibold text-white">Persona Natural</span>
+                <span class="block text-[11px] text-navy-muted">Generador o Titular particular</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Form Fields Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+          <div>
+            <label class="block text-xs font-medium text-navy-muted mb-1">Tipo de Documento *</label>
+            <select class="w-full px-space-md py-2.5 rounded-xl bg-navy-card border border-navy-border text-sm text-white focus:outline-none focus:border-blue-400">
+              <option value="NIT" selected="">NIT (Número de Identificación Tributaria)</option>
+              <option value="CC">Cédula de Ciudadanía (C.C.)</option>
+              <option value="CE">Cédula de Extranjería (C.E.)</option>
+              <option value="PAS">Pasaporte</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-navy-muted mb-1">Número de Documento / NIT *</label>
+            <input type="text" value="901.428.590-3" placeholder="Ej: 900123456-7" class="w-full px-space-md py-2.5 rounded-xl bg-navy-card border border-navy-border text-sm text-white font-data-mono placeholder:text-navy-muted focus:outline-none focus:border-blue-400">
+          </div>
+
+          <div class="md:col-span-2">
+            <label class="block text-xs font-medium text-navy-muted mb-1">Nombre Completo o Razón Social *</label>
+            <input type="text" value="LOGÍSTICA INTEGRAL COLOMBIA S.A.S." placeholder="Nombre del titular del despacho" class="w-full px-space-md py-2.5 rounded-xl bg-navy-card border border-navy-border text-sm text-white focus:outline-none focus:border-blue-400">
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-navy-muted mb-1">Correo Electrónico (para comprobante) *</label>
+            <input type="email" value="tesoreria@logisticaintegral.com" placeholder="facturacion@empresa.com" class="w-full px-space-md py-2.5 rounded-xl bg-navy-card border border-navy-border text-sm text-white focus:outline-none focus:border-blue-400">
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-navy-muted mb-1">Teléfono Celular / WhatsApp *</label>
+            <input type="tel" value="+57 314 890 4421" placeholder="Ej: 300 123 4567" class="w-full px-space-md py-2.5 rounded-xl bg-navy-card border border-navy-border text-sm text-white font-data-mono focus:outline-none focus:border-blue-400">
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-navy-muted mb-1">N° Factura, Manifiesto RNDC *</label>
+            <div class="relative">
+              <input type="text" value="FAC-2026-94821 / MAN-58291" class="w-full px-space-md py-2.5 rounded-xl bg-navy-card border border-navy-border text-sm text-white font-data-mono uppercase focus:outline-none focus:border-blue-400">
+              <span class="absolute right-3 top-2.5 text-xs text-emerald-400 font-data-mono font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">check_circle</span> RNDC
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-navy-muted mb-1">Monto a Pagar (COP) *</label>
+            <div class="relative">
+              <span class="absolute left-3 top-2.5 text-sm font-bold text-blue-300">$</span>
+              <input type="text" value="1.850.000" class="w-full pl-8 pr-16 py-2.5 rounded-xl bg-navy-card border border-navy-border text-base font-bold text-white font-data-mono focus:outline-none focus:border-blue-400">
+              <span class="absolute right-3 top-2.5 text-xs text-navy-muted font-bold font-data-mono">COP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenedor 2: Selección de Medio de Pago -->
+      <div class="rounded-2xl bg-navy-surface border border-navy-border p-space-md sm:p-space-lg shadow-xl">
+        <div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-navy-border">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded-lg bg-blue-600/30 border border-blue-400/40 text-blue-300 flex items-center justify-center font-bold text-sm">2</span>
+            <h2 class="text-lg font-bold text-white tracking-tight">Selección del Medio de Pago</h2>
+          </div>
+          <span class="text-xs text-emerald-400 flex items-center gap-1 font-data-mono">
+            <span class="material-symbols-outlined text-[15px]">lock</span> Cifrado TLS 1.3
+          </span>
+        </div>
+
+        <!-- Botones de Métodos (Pestañas visuales) -->
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-space-md">
+          <button type="button" class="p-2.5 rounded-xl border border-blue-400/60 bg-blue-600/20 text-white flex flex-col items-center justify-center gap-1 shadow-sm transition-all">
+            <span class="material-symbols-outlined text-[24px] text-blue-300">account_balance</span>
+            <span class="text-xs font-bold">PSE Débito</span>
+            <span class="text-[10px] text-blue-200/80 font-data-mono">Bancos Colombia</span>
+          </button>
+          <button type="button" class="p-2.5 rounded-xl border border-navy-border bg-navy-card hover:border-blue-400/40 text-navy-muted hover:text-white flex flex-col items-center justify-center gap-1 transition-all">
+            <span class="material-symbols-outlined text-[24px] text-orange-400">credit_card</span>
+            <span class="text-xs font-semibold">Tarjetas</span>
+            <span class="text-[10px] text-navy-muted font-data-mono">Crédito / Débito</span>
+          </button>
+          <button type="button" class="p-2.5 rounded-xl border border-navy-border bg-navy-card hover:border-blue-400/40 text-navy-muted hover:text-white flex flex-col items-center justify-center gap-1 transition-all">
+            <span class="material-symbols-outlined text-[24px] text-emerald-400">phone_android</span>
+            <span class="text-xs font-semibold">Billeteras</span>
+            <span class="text-[10px] text-navy-muted font-data-mono">Nequi • Daviplata</span>
+          </button>
+          <button type="button" class="p-2.5 rounded-xl border border-navy-border bg-navy-card hover:border-blue-400/40 text-navy-muted hover:text-white flex flex-col items-center justify-center gap-1 transition-all">
+            <span class="material-symbols-outlined text-[24px] text-yellow-400">corporate_fare</span>
+            <span class="text-xs font-semibold">Bancolombia</span>
+            <span class="text-[10px] text-navy-muted font-data-mono">Botón / PAB</span>
+          </button>
+          <button type="button" class="p-2.5 rounded-xl border border-navy-border bg-navy-card hover:border-blue-400/40 text-navy-muted hover:text-white flex flex-col items-center justify-center gap-1 transition-all">
+            <span class="material-symbols-outlined text-[24px] text-rose-400">storefront</span>
+            <span class="text-xs font-semibold">Efectivo</span>
+            <span class="text-[10px] text-navy-muted font-data-mono">Efecty • SuRed</span>
+          </button>
+        </div>
+
+        <!-- Contenido Específico de PSE (Predeterminado activo) -->
+        <div class="p-space-md rounded-xl bg-navy-card/90 border border-navy-border flex flex-col gap-space-md">
+          <div class="flex items-center justify-between pb-2 border-b border-navy-border/60">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-300 flex items-center justify-center font-bold text-xs">PSE</div>
+              <div>
+                <h3 class="text-sm font-bold text-white">Pago Seguro en Línea - PSE (ACH Colombia)</h3>
+                <p class="text-xs text-navy-muted">Débito directo desde tu cuenta de ahorros o corriente</p>
+              </div>
+            </div>
+            <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Sin costo adicional</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+            <div class="md:col-span-2">
+              <label class="block text-xs font-semibold text-blue-200 mb-1">Selecciona tu Entidad Financiera *</label>
+              <select class="w-full px-space-md py-3 rounded-xl bg-navy-surface border border-blue-500/40 text-sm text-white focus:outline-none focus:border-blue-400 font-medium">
+                <option value="">-- Seleccione su Banco --</option>
+                <option value="bancolombia" selected="">Bancolombia</option>
+                <option value="davivienda">Davivienda</option>
+                <option value="bogota">Banco de Bogotá</option>
+                <option value="bbva">BBVA Colombia</option>
+                <option value="nu">Nu Colombia (Cuenta Nu)</option>
+                <option value="lulo">Lulo Bank</option>
+                <option value="nequi">Nequi</option>
+                <option value="daviplata">Daviplata</option>
+                <option value="scotiabank">Scotiabank Colpatria</option>
+                <option value="occidente">Banco de Occidente</option>
+                <option value="popular">Banco Popular</option>
+                <option value="cajasocial">Banco Caja Social</option>
+                <option value="itau">Itaú Colombia</option>
+                <option value="falabella">Banco Falabella</option>
+                <option value="dale">Dale!</option>
+                <option value="avvillas">Banco AV Villas</option>
+                <option value="coopcentral">Banco Cooperativo Coopcentral</option>
+                <option value="serfinanza">Banco Serfinanza</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-navy-muted mb-1">Tipo de Cliente en la Entidad *</label>
+              <select class="w-full px-space-md py-2.5 rounded-xl bg-navy-surface border border-navy-border text-sm text-white focus:outline-none focus:border-blue-400">
+                <option value="juridica" selected="">Persona Jurídica (Empresa)</option>
+                <option value="natural">Persona Natural</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-navy-muted mb-1">Correo registrado en PSE *</label>
+              <input type="email" value="tesoreria@logisticaintegral.com" placeholder="tu_correo@banco.com" class="w-full px-space-md py-2.5 rounded-xl bg-navy-surface border border-navy-border text-sm text-white focus:outline-none focus:border-blue-400">
+            </div>
+          </div>
+
+          <!-- Opciones Rápidas Adicionales / Billeteras Rápidas -->
+          <div class="mt-2 pt-space-sm border-t border-navy-border/50">
+            <span class="block text-xs text-navy-muted mb-2 font-medium">Otras opciones directas admitidas:</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-200 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-purple-400"></span> Nequi Directo
+              </span>
+              <span class="px-2.5 py-1 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-200 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-red-400"></span> Daviplata Express
+              </span>
+              <span class="px-2.5 py-1 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-200 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-yellow-400"></span> Transfiya
+              </span>
+              <span class="px-2.5 py-1 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-200 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Efecty Convenio 11289
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna Derecha: Resumen de Liquidación Sticky -->
+    <div class="lg:col-span-4 sticky top-28 flex flex-col gap-space-md">
+      <div class="rounded-2xl bg-navy-surface border border-blue-500/40 p-space-md sm:p-space-lg shadow-2xl relative overflow-hidden">
+        <!-- Shimmer decorative top beam -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400"></div>
+
+        <div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-navy-border">
+          <h3 class="text-base font-bold text-white tracking-tight flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-blue-400 text-[20px]">receipt_long</span>
+            Resumen de Liquidación
+          </h3>
+          <span class="text-[11px] font-data-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-semibold">Vigente</span>
+        </div>
+
+        <!-- Detalle de Conceptos -->
+        <div class="flex flex-col gap-2.5 text-sm pb-space-md border-b border-navy-border">
+          <div class="flex justify-between items-center text-xs">
+            <span class="text-navy-muted">Referencia Factura:</span>
+            <span class="font-data-mono font-bold text-white">FAC-2026-94821</span>
+          </div>
+          <div class="flex justify-between items-center text-xs">
+            <span class="text-navy-muted">Manifiesto RNDC:</span>
+            <span class="font-data-mono text-blue-300">MAN-58291-BOG</span>
+          </div>
+          <div class="flex justify-between items-center text-xs">
+            <span class="text-navy-muted">Método seleccionado:</span>
+            <span class="font-medium text-white flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> PSE ACH Bancolombia
+            </span>
+          </div>
+          <div class="flex justify-between items-center pt-2 border-t border-navy-border/60">
+            <span class="text-navy-muted">Subtotal Transporte / Flete:</span>
+            <span class="font-data-mono text-white">$ 1.850.000 COP</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-navy-muted">Comisión Pasarela:</span>
+            <span class="font-data-mono text-emerald-400 font-semibold">$ 0 COP (Asumido)</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-navy-muted">IVA / Retenciones:</span>
+            <span class="font-data-mono text-blue-200/80">$ 0 COP (Exento RNDC)</span>
+          </div>
+        </div>
+
+        <!-- Total a Pagar Destacado -->
+        <div class="py-space-md">
+          <span class="block text-xs uppercase tracking-wider text-navy-muted font-semibold mb-1">Total Liquidado a Pagar</span>
+          <div class="flex items-baseline justify-between">
+            <span class="text-2xl sm:text-3xl font-extrabold text-white font-data-mono tracking-tight">$ 1.850.000</span>
+            <span class="text-xs font-bold text-blue-300 font-data-mono">COP</span>
+          </div>
+          <span class="text-[11px] text-navy-muted block mt-1">Moneda oficial: Pesos Colombianos</span>
+        </div>
+
+        <!-- Checkbox Términos y Condiciones -->
+        <div class="mb-space-md p-space-sm rounded-xl bg-navy-card/80 border border-navy-border">
+          <label class="flex items-start gap-2.5 cursor-pointer">
+            <input type="checkbox" checked="" class="accent-blue-500 w-4 h-4 mt-0.5 shrink-0 rounded">
+            <span class="text-[11px] text-navy-muted leading-relaxed">
+              Acepto los <a href="#" class="text-blue-300 underline hover:text-white">Términos del Servicio de Pago</a>, autorización de débito bancario y política de tratamiento de datos personales de <strong class="text-white">Sotcarga S.A.S.</strong> (Habeas Data Ley 1581).
+            </span>
+          </label>
+        </div>
+
+        <!-- Botón CTA Principal -->
+        <button type="button" class="w-full py-3.5 px-space-md rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold text-sm tracking-wide shadow-lg shadow-blue-600/30 border border-blue-400/40 flex items-center justify-center gap-2 transition-all cursor-pointer transform hover:-translate-y-0.5">
+          <span class="material-symbols-outlined text-[20px]">lock</span>
+          <span>Proceder al Pago Seguro de $ 1.850.000 COP</span>
+        </button>
+
+        <!-- Sellos de Seguridad y Respaldo -->
+        <div class="mt-space-md pt-space-sm border-t border-navy-border flex flex-col gap-2">
+          <div class="flex items-center justify-center gap-4 text-xs font-data-mono text-navy-muted">
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-emerald-400 text-[15px]">verified</span> PCI-DSS Nivel 1</span>
+            <span><br></span>
+            
+          </div>
+          <p class="text-[10px] text-center text-navy-muted">
+            Transacción procesada por pasarela certificada ACH Colombia y autorizada por la Superintendencia Financiera.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta de Asistencia Inmediata -->
+      <div class="rounded-2xl bg-navy-surface border border-navy-border p-space-md flex items-center gap-3 shadow-lg">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[22px]">support_agent</span>
+        </div>
+        <div class="min-w-0 flex-1">
+          <span class="text-xs font-bold text-white block">¿Dudas con tu pago o retención?</span>
+          <span class="text-[11px] text-navy-muted block truncate">Línea directa Tesorería y Cartera</span>
+          <a href="https://wa.me/573227145200" target="_blank" class="text-xs text-emerald-300 font-bold hover:underline flex items-center gap-1 mt-0.5">
+            <span>WhatsApp: +(57) 322 714 5200</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section class="mb-space-xl ai-electric-border-card p-1.5 mt-12" id="resumen-ultimos-pagos" style="scroll-margin-top: 90px; margin-top: 6rem; margin-bottom: 4rem;"><div class="rounded-2xl bg-navy-surface border border-navy-border p-space-md sm:p-space-lg shadow-xl"><div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-space-sm mb-space-md border-b border-navy-border"><div><div class="flex flex-wrap items-center gap-2 mb-1"><span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 font-data-mono"><span class="material-symbols-outlined text-[14px]">verified</span> Historial Certificado</span><span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-500/20 text-blue-200 border border-blue-400/30 font-data-mono">COMPROBANTES DIAN &amp; PSE</span></div><h2 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-[28px]">history_edu</span>Resumen de Pagos Vigencia 2026</h2><p class="text-xs text-blue-200/80 mt-0.5">Registro histórico de liquidaciones exitosas, transacciones bancarias y comprobantes descargables.</p></div><div class="flex items-center gap-2 shrink-0"><span class="px-3 py-1.5 rounded-xl bg-navy-card border border-navy-border text-xs text-emerald-400 font-data-mono flex items-center gap-1.5 font-semibold"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Conciliado 100%</span></div></div><div class="flex flex-col gap-3"><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-87410</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-992418-ACH</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">PSE Bancolombia</strong> • 12 Feb 2026, 15:42</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 2.450.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-85129</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-812039-PAB</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">Botón Bancolombia</strong> • 28 Ene 2026, 11:20</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 980.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-84302</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-764921-PSE</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">PSE Davivienda</strong> • 15 Ene 2026, 09:14</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 3.120.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-82190</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-651842-CARD</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">Tarjeta Débito Visa</strong> • 08 Ene 2026, 16:30</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 1.850.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-80945</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-582104-ACH</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">PSE Banco de Bogotá</strong> • 29 Dic 2025, 14:10</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 4.600.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-79811</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-493180-ACH</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">PSE BBVA</strong> • 18 Dic 2025, 10:25</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 1.250.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-77540</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-390425-PAB</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">Botón Bancolombia</strong> • 05 Dic 2025, 17:40</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 2.890.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-75218</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-312980-ACH</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">PSE Scotiabank</strong> • 22 Nov 2025, 11:15</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 850.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-73104</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-256190-ACH</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">PSE Bancolombia</strong> • 14 Nov 2025, 08:50</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 3.400.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-71055</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-184902-NEQ</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">Nequi Directo</strong> • 02 Nov 2025, 13:35</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 1.680.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-69420</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-109284-ACH</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">PSE Banco de Occidente</strong> • 24 Oct 2025, 15:20</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 2.150.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div><div class="p-3 sm:p-4 rounded-xl bg-navy-card/70 border border-navy-border/80 hover:border-blue-500/40 transition-all flex flex-col md:flex-row md:items-center justify-between gap-3"><div class="flex items-center gap-3 min-w-0"><div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 flex items-center justify-center shrink-0 shadow-inner"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div><div class="min-w-0 flex-1"><div class="flex flex-wrap items-center gap-2 mb-0.5"><span class="font-data-mono text-xs font-bold text-white">FAC-2026-68115</span><span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-data-mono flex items-center gap-1"><span class="material-symbols-outlined text-[12px]">check_circle</span> Aprobado / Pagado</span><span class="text-[11px] font-data-mono text-navy-muted">Cus: #AUT-087321-ACH</span></div><p class="text-xs text-blue-200/80 truncate">Método: <strong class="text-white">PSE Bancolombia</strong> • 10 Oct 2025, 12:05</p></div></div><div class="flex items-center justify-between md:justify-end gap-4 shrink-0 pt-2 md:pt-0 border-t md:border-t-0 border-navy-border/50"><div class="text-left md:text-right"><span class="text-sm font-extrabold text-white font-data-mono">$ 5.200.000 COP</span><span class="text-[10px] text-emerald-400 block font-data-mono">Confirmación Bancaria OK</span></div><button type="button" class="px-3 py-1.5 rounded-lg bg-navy-surface border border-navy-border text-xs text-blue-300 hover:text-white hover:border-blue-400/50 flex items-center gap-1.5 transition-colors font-medium shadow-sm"><span class="material-symbols-outlined text-[16px]">download</span><span>PDF Recibo</span></button></div></div></div></div></section>
 <!-- Video Section Header -->
-<div class="flex flex-col gap-space-xl mb-space-xl"><div class="flex flex-col gap-space-lg"><!-- Module 1: Tablas Basicas --><!-- Module 2: Productos --><!-- Module 3: Despachos --><!-- Module 4: Facturacion --><!-- Module 5: Liquidaciones --><!-- Module 6: Consultas --><!-- Module 7: Herramientas de Administracion --><!-- Module 8: Usuario y Contrasena --><!-- Module 9: Contabilidad --><div class="bg-navy-surface border border-navy-border rounded-xl p-space-lg shadow-md hover:border-cyan-500/50 transition-colors module-search-item" id="modulo-contabilidad" style="scroll-margin-top: 130px;"><div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-navy-border/60 mb-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-cyan-950 border border-cyan-800/60 text-cyan-400 flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">account_balance</span></div><div><span class="text-cyan-400 font-label-sm font-semibold uppercase tracking-wider block">Causaciones &amp; Tributario</span><h3 class="font-headline-md text-headline-md text-white font-bold">Módulo de Contabilidad</h3><p class="font-data-mono text-data-mono text-navy-muted">Causación automática de fletes, retenciones ICA/fuente y balance contable</p></div></div><div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full bg-navy-card border border-cyan-500/40 font-data-mono text-data-mono text-cyan-400 font-medium">1 video cargado</span><span class="px-2.5 py-1 rounded-full bg-navy-card border border-navy-border font-data-mono text-data-mono text-navy-muted">1 manual PDF</span></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md"><div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-space-md"><div class="bg-navy-card border border-navy-border rounded-xl p-space-sm flex flex-col justify-between hover:border-cyan-500/40 transition-colors"><div class="relative aspect-video rounded-lg overflow-hidden bg-navy-bg mb-space-xs"><video class="w-full h-full object-cover rounded-lg shadow" controls="" playsinline="" preload="metadata" src="http://www.sotcarga.com/video/VIDEO%20DOC%20CONTABLES.mp4" style="aspect-ratio: 16 / 9; max-height: 220px;" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuCXVtGX7FBUPABG-POs5qw3cUOUz6V43czraJTSXht7zOVnCqrb-JruwKgAFiB57e6w_r6Q-G9Goj6NqvCoNOA12ap9wHEK84O32RWS2Sdc_sQt8AOfpyOLGfyr88JBjsuqo2fOJHAWMZSaWNeEj4663qplER6n1GPm9nLWfrjITw77UcxFXQ3VDOkyon1i2ky6JYxgDuYh4mMDte9jV4GYqErgY_YOErj1CLh67c8-nBUj_uCItalq"><source src="http://www.sotcarga.com/video/VIDEO%20DOC%20CONTABLES.mp4" type="video/mp4">Tu navegador no soporta reproducción de video.</video></div><div class="flex flex-col gap-1"><h4 class="font-headline-sm text-headline-sm text-white truncate font-semibold">Documentos Contables</h4><p class="font-data-mono text-data-mono text-navy-muted">Actualizado: 2026 • 910 vistas</p><div class="flex items-center justify-between mt-1 text-data-mono text-navy-muted pt-1 border-t border-navy-border/60"><span class="truncate text-rose-400 flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>Manual Doc Contables.pdf</span><div class="flex items-center gap-1.5"><button class="text-orange-400 hover:text-orange-300 font-label-sm font-semibold" type="button"><br></button><span class="text-navy-border">|</span><button class="text-navy-muted hover:text-navy-text font-label-sm" type="button"><br></button></div></div></div></div></div></div></div><!-- Module 10: Nomina --><div class="bg-navy-surface border border-navy-border rounded-xl p-space-lg shadow-md hover:border-emerald-500/50 transition-colors module-search-item" id="modulo-nomina" style="scroll-margin-top: 130px;"><div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-navy-border/60 mb-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-emerald-950 border border-emerald-800/60 text-emerald-400 flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">badge</span></div><div><span class="text-emerald-400 font-label-sm font-semibold uppercase tracking-wider block">Recursos Humanos</span><h3 class="font-headline-md text-headline-md text-white font-bold">Módulo de Nómina</h3><p class="font-data-mono text-data-mono text-navy-muted">Nómina electrónica, conductores asalariados, viáticos y seguridad social</p></div></div><div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full bg-navy-card border border-emerald-500/40 font-data-mono text-data-mono text-emerald-400 font-medium">1 video cargado</span><span class="px-2.5 py-1 rounded-full bg-navy-card border border-navy-border font-data-mono text-data-mono text-navy-muted">1 manual PDF</span></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md"><div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-space-md"><div class="bg-navy-card border border-navy-border rounded-xl p-space-sm flex flex-col justify-between hover:border-emerald-500/40 transition-colors"><div class="relative aspect-video rounded-lg overflow-hidden bg-navy-bg mb-space-xs"><video class="w-full h-full rounded-lg object-contain" controls="" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuCxTkN8QqH6bm6XJcvEmE9Jhmrykd_HHjd7l4VPbuq9rOtxivWD6d40vQvGWDrmJyOrVoWGmnUD7uuoZrz4UZer4wKKmOWpp1dvR15l2yb_6Y07KDbG781n1b5Hi38q6ld9yV_Ko5E0bl6ZZlqhUyDFj1t_5A9qm_YfvY-ewKuI8Pgj42A_ZIQmcCOobX-TBQK6LA0owDuNhxEAzjEL4dZTYj3BAmSoCZ82hvozy6UraJbzAxoRiQSu" preload="metadata" style="aspect-ratio: 16 / 9; max-height: 220px;"><source src="http://www.sotcarga.com/video/VIDEO%20TUTORIAL%20NOMINA.mp4" type="video/mp4">Tu navegador no soporta el formato de video.</video></div><div class="flex flex-col gap-1"><h4 class="font-headline-sm text-headline-sm text-white truncate font-semibold">Nómina&nbsp;</h4><p class="font-data-mono text-data-mono text-navy-muted">Actualizado: 2026 • 540 vistas</p><div class="flex items-center justify-between mt-1 text-data-mono text-navy-muted pt-1 border-t border-navy-border/60"><a class="truncate text-rose-400 flex items-center gap-1 hover:underline cursor-pointer" download="Manual_Nomina.pdf" href="https://www.sotcarga.com/manuales/PDF%20MANUAL%20DE%20NOMINA.pdf" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>Manual Nomina.pdf</a></div></div></div></div></div></div><!-- Module 11: Documento Soporte --><div class="bg-navy-surface border border-navy-border rounded-xl p-space-lg shadow-md hover:border-orange-500/50 transition-colors module-search-item" id="modulo-documento-soporte" style="scroll-margin-top: 130px;"><div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-navy-border/60 mb-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-orange-500/20 border border-orange-500/50 text-orange-400 flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">description</span></div><div><span class="text-orange-400 font-label-sm font-semibold uppercase tracking-wider block">DIAN Electrónica</span><h3 class="font-headline-md text-headline-md text-white font-bold">Módulo de Documento Soporte</h3><p class="font-data-mono text-data-mono text-navy-muted">Documento soporte electrónico para no obligados a facturar y transmisión DIAN</p></div></div><div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full bg-navy-card border border-orange-500/40 font-data-mono text-data-mono text-orange-400 font-medium">1 video cargado</span><span class="px-2.5 py-1 rounded-full bg-navy-card border border-navy-border font-data-mono text-data-mono text-navy-muted">1 manual PDF</span></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md"><div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-space-md"><div class="bg-navy-card border border-navy-border rounded-xl p-space-sm flex flex-col justify-between hover:border-orange-500/40 transition-colors"><div class="relative aspect-video rounded-lg overflow-hidden bg-navy-bg mb-space-xs"><video class="w-full h-full object-cover rounded-lg" controls="" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuCXVtGX7FBUPABG-POs5qw3cUOUz6V43czraJTSXht7zOVnCqrb-JruwKgAFiB57e6w_r6Q-G9Goj6NqvCoNOA12ap9wHEK84O32RWS2Sdc_sQt8AOfpyOLGfyr88JBjsuqo2fOJHAWMZSaWNeEj4663qplER6n1GPm9nLWfrjITw77UcxFXQ3VDOkyon1i2ky6JYxgDuYh4mMDte9jV4GYqErgY_YOErj1CLh67c8-nBUj_uCItalq" preload="metadata" style="aspect-ratio: 16 / 9; max-height: 220px;"><source src="http://www.sotcarga.com/video/VIDEO%20TUTORIAL%20DOC%20SOPORTE.mp4" type="video/mp4">Tu navegador no soporta el formato de video.</video></div><div class="flex flex-col gap-1"><h4 class="font-headline-sm text-headline-sm text-white truncate font-semibold">Documento Soporte</h4><p class="font-data-mono text-data-mono text-navy-muted">Actualizado: 2026 • 1.1k vistas</p><div class="flex items-center justify-between mt-1 text-data-mono text-navy-muted pt-1 border-t border-navy-border/60"><a class="truncate text-rose-400 flex items-center gap-1 hover:underline cursor-pointer" download="MANUAL_DOCUMENTO_SOPORTE.pdf" href="https://www.sotcarga.com/manuales/MANUAL%20DOCUMENTO%20SOPORTE.pdf" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>Manual Doc Soporte.pdf</a></div></div></div></div></div></div><div class="hidden p-space-xl text-center bg-navy-surface border border-navy-border rounded-xl" id="searchEmptyState"><div class="w-12 h-12 mx-auto rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center mb-space-sm"><span class="material-symbols-outlined text-[28px]">search_off</span></div><h4 class="font-headline-sm text-white font-bold mb-1">No se encontraron resultados</h4><p class="font-body-sm text-navy-muted mb-space-md">No hay videos o manuales que coincidan con el término buscado. Intenta con palabras clave como "RNDC", "remesa", "factura" o "fletes".</p><button class="px-space-md py-1.5 rounded-lg bg-[#1d4ed8] text-white font-label-md font-semibold hover:bg-[#1e40af] transition-colors" id="btnResetSearch" type="button">Ver todos los módulos</button></div></div></div>
+<div class="flex flex-col gap-space-xl mb-space-xl"></div>
 <!-- Document Manuals Fast Strip (Pure Document Downloads) -->
-<section class="bg-navy-surface border border-navy-border rounded-xl p-space-lg shadow-lg mb-space-xl" id="manuales-oficiales" style="scroll-margin-top: 130px;">
-<div class="flex flex-wrap items-center justify-between gap-3 mb-space-md">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-orange-400 text-[24px]">folder_special</span>
-<div>
-<span class="text-orange-400 font-label-sm uppercase tracking-wider font-semibold block">Repositorio Institucional</span>
-<h3 class="font-headline-md text-headline-md text-white font-bold">Manuales &amp; Fichas Técnicas Oficiales</h3>
-</div>
-</div>
-<a class="font-label-md text-label-md text-orange-400 hover:text-orange-300 flex items-center gap-1 transition-colors font-semibold" href="#">
 
-
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
-<div class="p-space-md rounded-lg bg-navy-card border border-navy-border/80 flex items-center justify-between hover:border-orange-500/50 hover:bg-navy-card/90 transition-all shadow-sm">
-<div class="flex items-center gap-space-sm min-w-0">
-<div class="w-9 h-9 rounded bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
-</div>
-<div class="min-w-0">
-<a class="font-label-md text-label-md text-white truncate font-medium hover:underline block" download="MANUAL_DOCUMENTO_SOPORTE.pdf" href="https://www.sotcarga.com/manuales/MANUAL%20DOCUMENTO%20SOPORTE.pdf" rel="noopener noreferrer" target="_blank">Manual Doc Soporte.pdf</a>
-<p class="font-data-mono text-data-mono text-navy-muted">Guia Oficial</p>
-</div>
-</div>
-<a class="p-2 text-navy-muted hover:text-orange-400 hover:bg-navy-surface rounded transition-colors flex items-center justify-center" download="MANUAL_DOCUMENTO_SOPORTE.pdf" href="https://www.sotcarga.com/manuales/MANUAL%20DOCUMENTO%20SOPORTE.pdf" rel="noopener noreferrer" target="_blank" title="Descargar Documento DIAN"><span class="material-symbols-outlined text-[20px]">download</span></a>
-</div>
-<div class="p-space-md rounded-lg bg-navy-card border border-navy-border/80 flex items-center justify-between hover:border-orange-500/50 hover:bg-navy-card/90 transition-all shadow-sm">
-<div class="flex items-center gap-space-sm min-w-0">
-<div class="w-9 h-9 rounded bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
-</div>
-<div class="min-w-0">
-<a class="font-label-md text-label-md text-white truncate font-medium hover:underline block" download="Manual_Nomina.pdf" href="https://www.sotcarga.com/manuales/PDF%20MANUAL%20DE%20NOMINA.pdf" rel="noopener noreferrer" target="_blank">Manual Nomina.pdf</a>
-<p class="font-data-mono text-data-mono text-navy-muted">Guia oficial</p>
-</div>
-</div>
-<a class="p-2 text-navy-muted hover:text-orange-400 hover:bg-navy-surface rounded transition-colors flex items-center justify-center" download="Manual_Nomina.pdf" href="https://www.sotcarga.com/manuales/PDF%20MANUAL%20DE%20NOMINA.pdf" rel="noopener noreferrer" target="_blank" title="Descargar Documento"><span class="material-symbols-outlined text-[20px]">download</span></a>
-</div>
-
-<div class="p-space-md rounded-lg bg-navy-card border border-navy-border/80 flex items-center justify-between hover:border-orange-500/50 hover:bg-navy-card/90 transition-all shadow-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded bg-rose-950/60 border border-rose-800/50 text-rose-400 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">picture_as_pdf</span></div><div class="min-w-0"><a class="font-label-md text-label-md text-white truncate font-medium hover:underline block" download="Manual_Sisifo.pdf" href="https://www.sotcarga.com/manuales/pdf%20manual%20sisifo.pdf" rel="noopener noreferrer" target="_blank">Manual_Sisifo.pdf</a><p class="font-data-mono text-data-mono text-navy-muted">Guía Oficial&nbsp;</p></div></div><a class="p-2 text-navy-muted hover:text-orange-400 hover:bg-navy-surface rounded transition-colors flex items-center justify-center" download="Manual_Sisifo.pdf" href="https://www.sotcarga.com/manuales/pdf%20manual%20sisifo.pdf" rel="noopener noreferrer" target="_blank" title="Descargar Manual General Sísifo"><span class="material-symbols-outlined text-[20px]">download</span></a></div></div>
-</section>
 <!-- Upload Modal / Drawer (Accessible via JS) -->
-<div class="fixed inset-0 z-50 bg-navy-bg/80 backdrop-blur-md flex items-center justify-center p-gutter hidden pointer-events-none" id="uploadModal">
+<div class="fixed inset-0 z-50 bg-navy-bg/80 backdrop-blur-md flex items-center justify-center p-gutter hidden" id="uploadModal">
 <div class="w-full max-w-2xl bg-navy-surface border border-navy-border rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
 <!-- Modal Header -->
 <div class="px-space-lg py-space-md sotcarga-header-gradient border-b border-navy-border flex items-center justify-between">
@@ -163,10 +753,7 @@
     </div>
 </div>
 <div class="flex items-center gap-4 text-xs font-data-mono">
-<a class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-700/60 text-emerald-400 hover:text-emerald-300 transition-colors" href="https://wa.me/573227145200" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px]">chat</span>
-<span>WhatsApp Soporte: +(57) 322 714 5200</span>
-</a>
+<a class="ai-shimmer-chip shrink-0 cursor-pointer" href="https://wa.me/573227145200" rel="noopener noreferrer" target="_blank"><span class="ai-shimmer-content font-data-mono text-xs text-white flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-emerald-400">chat</span><span class="text-emerald-300 font-medium">WhatsApp Soporte: +(57) 322 714 5200</span></span></a>
 <span class="text-navy-border hidden sm:inline">|</span>
 <span class="text-navy-muted hidden sm:inline">RNDC &amp; DIAN Homologado</span>
 </div>
@@ -268,6 +855,26 @@
   </script>
 </div><div class="hidden" id="searchEngineScriptContainer"><script>window.addEventListener('DOMContentLoaded',function(){const searchInput=document.getElementById('globalSearchInput');const searchBtn=document.getElementById('globalSearchBtn');const clearBtn=document.getElementById('clearSearchBtn');const emptyState=document.getElementById('searchEmptyState');const resetBtn=document.getElementById('btnResetSearch');const moduleItems=document.querySelectorAll('.module-search-item');function normalize(text){return(text||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();}function performSearch(scrollOnMatch){const term=normalize(searchInput?searchInput.value:'');if(clearBtn){if(term.length>0){clearBtn.classList.remove('hidden');}else{clearBtn.classList.add('hidden');}}let matchedCount=0;let firstMatch=null;moduleItems.forEach(item=>{const text=normalize(item.innerText);const isMatch=!term||text.includes(term);if(isMatch){item.classList.remove('hidden');matchedCount++;if(!firstMatch)firstMatch=item;}else{item.classList.add('hidden');}});if(emptyState){if(matchedCount===0&&term.length>0){emptyState.classList.remove('hidden');}else{emptyState.classList.add('hidden');}}if(scrollOnMatch&&firstMatch&&term.length>0){firstMatch.scrollIntoView({behavior:'smooth',block:'start'});}}if(searchInput){searchInput.addEventListener('input',function(){performSearch(false);});searchInput.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();performSearch(true);}});window.addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();searchInput.focus();searchInput.select();}});}if(searchBtn){searchBtn.addEventListener('click',function(e){e.preventDefault();performSearch(true);});}if(clearBtn){clearBtn.addEventListener('click',function(){if(searchInput){searchInput.value='';searchInput.focus();}performSearch(false);});}if(resetBtn){resetBtn.addEventListener('click',function(){if(searchInput){searchInput.value='';searchInput.focus();}performSearch(false);});}});</script></div></main></div>
 <style>.text-orange-400, .text-orange-300, .hover\:text-orange-400:hover, .hover\:text-orange-300:hover { color: #c4b5fd !important; }</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
